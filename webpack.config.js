@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -33,7 +34,12 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          isDevelopment && 'style-loader',
+          !isDevelopment && MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ].filter(Boolean),
       },
       {
         test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
@@ -53,6 +59,9 @@ module.exports = {
   },
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
+    !isDevelopment && new MiniCssExtractPlugin({
+      filename: 'style.bundle.css',
+    }),
     new HtmlWebpackPlugin(),
   ].filter(Boolean),
 };

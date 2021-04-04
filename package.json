@@ -8,7 +8,7 @@
   "scripts": {
     "clean-client": "rm -rf src/dist && mkdir src/dist",
     "build": "export NODE_ENV=production && npm run clean-client && webpack",
-    "start": "npm run build-prod && node app.js",
+    "start": "npm run build && node app.js",
     "dev": "npm run clean-client && webpack serve --hot"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "css-loader": "^5.2.0",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.0",
     "postcss-loader": "^5.2.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
