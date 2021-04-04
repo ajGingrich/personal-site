@@ -4,10 +4,12 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      images: path.resolve(__dirname, 'src/images/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+    },
   },
   module: {
     rules: [
@@ -33,6 +35,11 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   plugins: [new HtmlWebpackPlugin()],
 };

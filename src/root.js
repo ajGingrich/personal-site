@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+// TODO: eslint on this guy
+import { ErrorBoundary } from 'components/ErrorBoundary';
+
+import Routes from './routes';
 
 const Root = () => {
-  const [count, setCount] = useState(1);
   return (
     <div>
-      Hello
-      <span onClick={() => setCount(count + 1)}>{count}</span>
+      <Routes />
     </div>
   );
 };
