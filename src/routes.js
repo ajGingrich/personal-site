@@ -5,6 +5,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import FourOhFourError from 'components/FourOhFourError'
 import HomePage from 'pages/HomePage';
 
 const Routes = () => {
@@ -12,6 +13,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route component={FourOhFourError} />
       </Switch>
     </Router>
   )

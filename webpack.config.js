@@ -1,13 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const path = require('path');
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 module.exports = {
+  mode: isDevelopment ? 'development' : 'production',
   entry: './src/index.js',
-  mode: 'development',
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
-      images: path.resolve(__dirname, 'src/images/'),
+      images: path.resolve(__dirname, 'public/'),
       pages: path.resolve(__dirname, 'src/pages/'),
     },
   },
@@ -15,11 +18,18 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         resolve: {
           extensions: ['.js', '.jsx'],
         },
-        use: ['babel-loader'],
-        exclude: /node_modules/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              isDevelopment && 'react-refresh/babel',
+            ].filter(Boolean),
+          },
+        }],
       },
       {
         test: /\.css$/i,
@@ -41,5 +51,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    isDevelopment && new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin(),
+  ].filter(Boolean),
 };
