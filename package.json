@@ -5,16 +5,23 @@
   "repository": "git@github.com:ajGingrich/personal-site.git",
   "author": "Andrew Gingrich <gandrew320@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "clean-client": "rm -rf src/dist && mkdir src/dist",
+    "build": "npm run clean-client && webpack",
+    "serve": "babel-node server/server.js"
+  },
   "dependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.30.0"
   },
   "devDependencies": {
+    "babel-node": "^0.0.1-security",
     "webpack-cli": "^4.6.0"
   }
 }
