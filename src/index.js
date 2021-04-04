@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
-function component() {
-   const element = document.createElement('div');
+import Root from './Root';
 
-  // Lodash, currently included via a script, is required for this line to work
-  // Lodash, now imported by this script
+const render = (Component) => {
+  ReactDOM.render(
+    <Component />,
+    document.getElementById('root'),
+  );
+};
 
-   return element;
- }
-
- document.body.appendChild(component());
+render(Root);

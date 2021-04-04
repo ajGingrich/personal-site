@@ -11,7 +11,7 @@ const Experience = ({
   // startDate,
   // endDate,
 }) => {
-          // <img id="imgAvantica" className="img-responsive center-xs" src="img/work_avantica.jpg">
+  // <img id="imgAvantica" className="img-responsive center-xs" src="img/work_avantica.jpg">
   return (
     <Row>
       <Col sm={3} xs={12}>

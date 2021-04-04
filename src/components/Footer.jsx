@@ -9,6 +9,7 @@ const Footer = () => {
           <footer>
             <div className="container text-center">
               <p>&copy; Andrew Gingrich 2021</p>
+            </div>
           </footer>
           </Col>
       </Row>
