@@ -1,13 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-const About = () => {
+const WorkExperience = () => {
   return (
-    <section id="about">
+    <section id="work">
       <Row>
         <Col md={12}>
           <div className="text-center">
-            <p>About Me</p>
+            <p>This is the background sections</p>
           </div>
         </Col>
       </Row>
@@ -15,4 +15,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default WorkExperience;

@@ -6,6 +6,17 @@
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url('images/dark-background.jpg');
 }
+
+.flag {
+  margin: 5px;
+  display: inline;
+}
+.flag:hover {
+  cursor: pointer;
+}
+
+
+/* not in use */
 .navbarCustom.navbar-toggle {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
@@ -46,7 +57,8 @@
 .navbarCustom.nav li.active a:hover {
   color: white;
 }
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   .navbarCustom{
     padding: 20px 0;
     border-bottom: none;
@@ -56,10 +68,4 @@
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
-  .navbar-custom.top-nav-collapse {
-    padding: 0;
-    /*background: black;*/
-    background: url('images/dark-background.jpg');
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-}
+} */
