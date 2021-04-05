@@ -2,4 +2,6 @@
   background-image: url('images/dark-background.jpg');
   font-size: 18px;
   color: white;
+  height: 100vh;
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

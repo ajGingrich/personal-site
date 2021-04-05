@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // TODO: eslint on this guy
 import ErrorBoundary from 'components/ErrorBoundary';

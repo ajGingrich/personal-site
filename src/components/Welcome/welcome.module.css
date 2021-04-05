@@ -5,36 +5,33 @@
   padding: 100px 0;
   text-align: center;
   color: white;
-  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
-  background: url('images/intro_skydive.jpg') no-repeat bottom center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  background: url('images/intro_skydive.jpg') no-repeat center center fixed;
   background-size: cover;
-  -o-background-size: cover;
+  height: 100vh;
   text-shadow: 1px 1px 0 #000,
-  -1px 1px 0 #000,
-  1px -1px 0 #000,
-  -1px -1px 0 #000,
-  0px 1px 0 #000,
-  0px -1px 0 #000,
-  -1px 0px 0 #000,
-  1px 0px 0 #000,
-  2px 2px 0 #000,
-  -2px 2px 0 #000,
-  2px -2px 0 #000,
-  -2px -2px 0 #000,
-  0px 2px 0 #000,
-  0px -2px 0 #000,
-  -2px 0px 0 #000,
-  2px 0px 0 #000,
-  1px 2px 0 #000,
-  -1px 2px 0 #000,
-  1px -2px 0 #000,
-  -1px -2px 0 #000,
-  2px 1px 0 #000,
-  -2px 1px 0 #000,
-  2px -1px 0 #000,
-  -2px -1px 0 #000;
+ -1px 1px 0 #000,
+ 1px -1px 0 #000,
+ -1px -1px 0 #000,
+ 0px 1px 0 #000,
+ 0px -1px 0 #000,
+ -1px 0px 0 #000,
+ 1px 0px 0 #000,
+ 2px 2px 0 #000,
+ -2px 2px 0 #000,
+ 2px -2px 0 #000,
+ -2px -2px 0 #000,
+ 0px 2px 0 #000,
+ 0px -2px 0 #000,
+ -2px 0px 0 #000,
+ 2px 0px 0 #000,
+ 1px 2px 0 #000,
+ -1px 2px 0 #000,
+ 1px -2px 0 #000,
+ -1px -2px 0 #000,
+ 2px 1px 0 #000,
+ -2px 1px 0 #000,
+ 2px -1px 0 #000,
+ -2px -1px 0 #000;
 }
 
 .intro-body {
@@ -42,6 +39,9 @@
   vertical-align: middle;
 }
 
-.test {
-  color: yellow;
+.introText {
+  margin: 0 0 35px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
