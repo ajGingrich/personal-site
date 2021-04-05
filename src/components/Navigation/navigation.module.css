@@ -1,0 +1,65 @@
+.navbarCustom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url('images/dark-background.jpg');
+}
+.navbarCustom.navbar-toggle {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbarCustom.navbar-toggle:focus,
+.navbarCustom.navbar-toggle:active {
+  outline: none;
+}
+.navbarCustom.navbar-brand {
+  font-weight: 700;
+  margin-left: 40px;
+}
+.navbarCustoma {
+  color: white;
+}
+.navbarCustom.nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.navbarCustom.nav li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbarCustom.nav li a:focus,
+.navbarCustom.nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbarCustom.nav li.active {
+  outline: none;
+}
+.navbarCustom.nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbarCustom.nav li.active a:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbarCustom{
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    /*background: black;*/
+    background: url('images/dark-background.jpg');
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
