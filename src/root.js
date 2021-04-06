@@ -1,15 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-// TODO: eslint on this guy
 import ErrorBoundary from 'components/ErrorBoundary';
 
 import Routes from './routes';
 
 const Root = () => {
   return (
-    <div>
+    <ErrorBoundary>
       <Routes />
-    </div>
+    </ErrorBoundary>
   );
 };
 

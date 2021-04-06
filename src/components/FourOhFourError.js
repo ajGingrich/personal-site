@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FourOhFourError = () => { // eslint-disable-line
+const FourOhFourError = () => {
   return (
     <div>
       404!

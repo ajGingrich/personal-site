@@ -20,7 +20,7 @@ const About = () => {
         </Col>
       </Row>
       <Row>
-        <Col sm={3} xs={12}>
+        <Col sm={3} xs={12} className="text-center">
           <img className="img-responsive center-xs" src={aboutFormal} />
         </Col>
         <Col sm={9} xs={12}>
@@ -38,13 +38,13 @@ const About = () => {
           </h5>
           <p>
             <span className="underline">
-              {`${SKILLS_INFORMATION.strong[language]} : `}
+              {`${SKILLS_INFORMATION.strong[language]}: `}
             </span>
             JavaScript, Java, HTML/CSS, React/Redux, Node
           </p>
           <p>
             <span className="underline">
-              {`${SKILLS_INFORMATION.knowledgable[language]} : `}
+              {`${SKILLS_INFORMATION.knowledgable[language]}: `}
             </span>
             C, Python, Ruby on Rails
           </p>

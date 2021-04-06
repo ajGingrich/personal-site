@@ -7,7 +7,9 @@ import configureStore from './store';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-import Root from './Root';
+import './app.css';
+
+import Root from './root';
 
 const render = (Component) => {
   ReactDOM.render(
