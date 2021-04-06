@@ -4,7 +4,7 @@ import reducer from 'reducers/reducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default function configureStore() {
+const configureStore = () => {
   return createStore(
     reducer,
     composeEnhancers(
@@ -12,3 +12,5 @@ export default function configureStore() {
     ),
   );
 };
+
+export default configureStore;

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-const languageReducer = (state = 'english') => state;
+import languageReducer from './languageReducer';
 
 const reducer = combineReducers({
   language: languageReducer,

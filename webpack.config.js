@@ -10,10 +10,13 @@ module.exports = {
   entry: './src/index.js',
   resolve: {
     alias: {
+      actions: path.resolve(__dirname, 'src/actions'),
       components: path.resolve(__dirname, 'src/components/'),
+      constants: path.resolve(__dirname, 'src/constants/'),
       images: path.resolve(__dirname, 'public/'),
       pages: path.resolve(__dirname, 'src/pages/'),
       reducers: path.resolve(__dirname, 'src/reducers/'),
+      selectors: path.resolve(__dirname, 'src/selectors/'),
     },
   },
   module: {
