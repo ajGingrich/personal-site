@@ -6,6 +6,7 @@ import { languageSelector } from 'selectors/language';
 import aboutFormal from 'images/about_formal.png';
 
 import { ABOUT_ME, SKILLS_INFORMATION } from './text';
+import styles from './about.module.css';
 
 const About = () => {
   const language = useSelector(languageSelector);
@@ -24,25 +25,25 @@ const About = () => {
           <img className="img-responsive center-xs" src={aboutFormal} />
         </Col>
         <Col sm={9} xs={12}>
-          <p>
+          <p className={styles.introText}>
             I have over three years of professional experience working with full-stack technologies. I currently work as a Senior Software Engineer
             at Gorilla Logic with React, Ruby on Rails, and MySQL. Although I enjoy seeing the end product, my real passion is for learning and
             conquering new challenges. This philosophy is described eloquently by Allan Watts:
           </p>
-          <p>
+          <p className={styles.introText}>
             “This is the real secret of life -- to be completely engaged with what you are doing in the here and now.
             And instead of calling it work, realize it is play”
           </p>
-          <h5>
+          <h5 className={styles.skillsHeader}>
             {SKILLS_INFORMATION.header[language]}
           </h5>
-          <p>
+          <p className={styles.introText}>
             <span className="underline">
               {`${SKILLS_INFORMATION.strong[language]}: `}
             </span>
             JavaScript, Java, HTML/CSS, React/Redux, Node
           </p>
-          <p>
+          <p className={styles.introText}>
             <span className="underline">
               {`${SKILLS_INFORMATION.knowledgable[language]}: `}
             </span>

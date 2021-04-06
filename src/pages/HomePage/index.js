@@ -11,7 +11,7 @@ import styles from './home-page.module.css';
 
 const HomePage = () => {
   return (
-    <div className={styles.background}>
+    <div>
       <Navigation />
       <Welcome />
       <Container className={styles.content}>

@@ -7,7 +7,7 @@ export const ABOUT_ME = {
 
 export const SKILLS_INFORMATION = {
   header: {
-    [ENGLISH]: 'Knowledgable',
+    [ENGLISH]: 'Skills',
     [SPANISH]: 'Habilidades',
   },
   strong: {

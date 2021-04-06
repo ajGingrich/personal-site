@@ -1,13 +1,6 @@
-.background {
-  background-image: url('images/dark-background.jpg');
-  font-size: 18px;
-  color: white;
-}
-
 .content {
   color: black;
   background-image: url('images/grey-background.jpg');
   /* font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 14px;
-  /* font-family: "Lora"; */
 }

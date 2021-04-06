@@ -293,15 +293,7 @@ body {
 .workDescription {
   text-align: left;
 }
-#about p {
-  text-align: left;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
 
-#about h5 {
-  margin: 20px 0 20px 0;
-}
 @media (min-width: 767px) {
   #work-experience p {
     text-align: left;
@@ -311,14 +303,6 @@ body {
   }
 }
 
-@media (min-width: 767px) {
-  #flag {
-    margin-left: -115px;
-  }
-  .navbar-custom .navbar-brand {
-    padding-left: 60px;
-  }
-}
 /*portfolio pages*/
 #portfolio .page2,
 #portfolio .page3 {
