@@ -9,7 +9,7 @@ const Welcome = () => {
       <div className={styles.introBody}>
         <Container>
           <Row>
-            <Col sm={{ span: 6, offset: 6 }} xs={{ span: 9, offset: 6 }}>
+            <Col sm={{ span: 6, offset: 6 }} xs={{ span: 9, offset: 3 }}>
               <p className={styles.introText}>
                 Hey, I'm
               </p>

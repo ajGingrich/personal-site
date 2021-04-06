@@ -2,11 +2,11 @@
   background-image: url('images/dark-background.jpg');
   font-size: 18px;
   color: white;
-  /* height: 100vh; */
-  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .content {
   color: black;
   background-image: url('images/grey-background.jpg');
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-size: 14px; */
 }
