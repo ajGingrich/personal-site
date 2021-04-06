@@ -13,6 +13,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       images: path.resolve(__dirname, 'public/'),
       pages: path.resolve(__dirname, 'src/pages/'),
+      reducers: path.resolve(__dirname, 'src/reducers/'),
     },
   },
   module: {
