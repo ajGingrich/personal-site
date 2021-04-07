@@ -5,7 +5,7 @@
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url('images/intro_skydive.jpg') no-repeat center center fixed;
+  background: url('https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/intro_skydive.jpg') no-repeat center center fixed;
   background-size: cover;
   /* height: 100vh; */
   text-shadow: 1px 1px 0 #000,
@@ -45,3 +45,25 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+/*Small Displays Intro Screen */
+/*
+.intro .intro-body .brand-heading {
+  font-size: 34px;
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 28px;
+  }
+}
+*/

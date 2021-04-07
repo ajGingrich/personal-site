@@ -3,7 +3,7 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-image: url('images/dark-background.jpg');
+  background-image: url('https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/dark-background.jpg');
 }
 
 html {
@@ -37,6 +37,10 @@ section {
   font-weight: bold;
 }
 
+.noMargin {
+  margin: 0;
+}
+
 .underline {
   border-bottom: 1px solid #000;
   padding-bottom: 1px;
@@ -60,94 +64,6 @@ a:focus {
   text-decoration: none;
   color: #1d9b6c;
 }
-
-
-
-
-/*Small Displays Intro Screen */
-.intro .intro-body .brand-heading {
-  font-size: 34px;
-}
-.intro .intro-body .intro-text {
-  font-size: 18px;
-}
-@media (min-width: 768px) {
-  .intro {
-    height: 100%;
-    padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-    font-size: 100px;
-  }
-  .intro .intro-body .intro-text {
-    font-size: 28px;
-  }
-}
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  font-size: 40px;
-  color: white;
-  background: transparent;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-}
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes pulse {
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
 
 /*mobile display*/
 .content-section {
@@ -256,42 +172,9 @@ body {
 }
 
 /*About Me*/
-.center-xs {
-  margin: 0 auto 15px auto;
-  border-radius: 5px;
-}
 
-
-#work-experience p {
-  font-size: 14px;
-}
 .clearFix {
   height: 40px;
-}
-.company {
-  font-size: 20px;
-  font-weight: bold;
-  color: royalblue;
-}
-.workTitle,
-.workDates {
-  font-size: 18px;
-  font-weight: bold;
-  color: forestgreen;
-}
-.workDates {
-  font-style: italic;
-}
-.workLocation {
-  font-size: 16px;
-  font-weight: bold;
-  color: #3c3d37;
-}
-.lastP {
-  margin-bottom: 10px;
-}
-.workDescription {
-  text-align: left;
 }
 
 @media (min-width: 767px) {

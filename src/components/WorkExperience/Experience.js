@@ -1,6 +1,13 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { Row, Col } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+import { ENGLISH } from 'constants/constants';
+
+import { languageSelector } from 'selectors/language';
+
+import styles from './experience.module.css';
 
 const Experience = ({
   company,
@@ -8,37 +15,71 @@ const Experience = ({
   image,
   description,
   location,
-  // startDate,
-  // endDate,
+  imageMargin,
+  startDate,
+  endDate,
+  isCurrent,
 }) => {
-  // <img id="imgAvantica" className="img-responsive center-xs" src="img/work_avantica.jpg">
+  const language = useSelector(languageSelector);
+  const isEnglish = language === ENGLISH;
+  const preciseDescription = description[language];
+  const preciseStartDate = startDate[language];
+  const preciseEndDate = endDate && endDate[language];
+  const englishDatePreposition = isCurrent ? 'since ' : '';
+  const endDateText = `${isEnglish ? 'to' : 'hasta'} ${preciseEndDate}`;
+
   return (
     <Row>
       <Col sm={3} xs={12}>
-        Hello Image
+        <img src={image} alt="" className={classnames('img-responsive', styles.image)} style={{ marginTop: imageMargin }} />
       </Col>
       <Col sm={9} xs={12}>
-        <p class="p-together">
-          <span class="company">{company}</span>
+        <p className="noMargin">
+          <span className={styles.company}>{company}</span>
         </p>
-        <p class="p-together">
-          <span class="workTitle en">{position}<span className="workDates">December 2018 to November 2020</span></span>
+        <p className="noMargin">
+          <span className={styles.workTitle}>
+            {position}
+            <span className={styles.workDates}>
+              {`, ${isEnglish ? englishDatePreposition : 'desde '}${preciseStartDate} ${isCurrent ? '' : endDateText} `}
+            </span>
+          </span>
         </p>
-        <p class="lastP"><span class="workLocation">{location}</span></p>
-        <p class="workDescription en">
-          {description}
+        <p className={classnames('noMargin', styles.locationParagraph)}>
+          <span className={styles.workLocation}>{location}</span>
+        </p>
+        <p className={styles.workDescription}>
+          {preciseDescription}
         </p>
       </Col>
     </Row>
-  )
+  );
 };
 
-Experience.props = {
+Experience.propTypes = {
   company: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.shape({
+    english: PropTypes.string.isRequired,
+    spanish: PropTypes.string.isRequired,
+  }).isRequired,
   location: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
+  imageMargin: PropTypes.string,
+  startDate: PropTypes.shape({
+    english: PropTypes.string.isRequired,
+    spanish: PropTypes.string.isRequired,
+  }).isRequired,
+  endDate: PropTypes.shape({
+    english: PropTypes.string,
+    spanish: PropTypes.string,
+  }),
+  isCurrent: PropTypes.bool.isRequired,
+};
+
+Experience.defaultProps = {
+  imageMargin: '10px',
+  endDate: null,
 };
 
 export default Experience;
