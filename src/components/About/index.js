@@ -49,9 +49,9 @@ const About = () => {
           </p>
           <p className={styles.introText}>
             <span className="underline">
-              {`${SKILLS_INFORMATION.knowledgable[language]}: `}
+              {`${SKILLS_INFORMATION.knowledgable[language]}:`}
             </span>
-            C, Python, Ruby on Rails
+            &nbsp;C, Python, Ruby on Rails
           </p>
         </Col>
       </Row>

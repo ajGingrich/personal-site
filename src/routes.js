@@ -5,15 +5,17 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import FourOhFourError from 'components/FourOhFourError';
+import Navigation from 'components/Navigation';
+import Welcome from 'components/Welcome';
 import HomePage from 'pages/HomePage';
 
 const Routes = () => {
   return (
     <Router>
+      <Navigation />
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={FourOhFourError} />
+        <Route exact path="/" component={Welcome} />
+        <Route component={HomePage} />
       </Switch>
     </Router>
   );

@@ -19,7 +19,7 @@ const LanguageFlag = () => {
 
   return (
     <div className={styles.flag} onClick={handleChangeLanguage}>
-      <img src={language === 'english' ? english : spanish } alt="flag" />
+      <img src={language === 'english' ? english : spanish} alt="flag" />
     </div>
   );
 };
