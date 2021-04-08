@@ -14,9 +14,9 @@ const WorkExperience = () => {
     <section id="work-experience">
       <Row>
         <Col md={12}>
-          <div className="text-center">
-            <p>{WORK_EXPERIENCE_TITLE[language]}</p>
-          </div>
+          <h3 className="text-center">
+            <span>{WORK_EXPERIENCE_TITLE[language]}</span>
+          </h3>
         </Col>
       </Row>
       {POSITIONS.map(({
