@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY ["package.json", "./"]
 
 # Install only for production
-RUN npm install
+RUN npm install --only=production
 
 # copy app source
 COPY . .

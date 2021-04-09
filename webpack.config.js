@@ -1,13 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
-
 module.exports = {
-  mode: isDevelopment ? 'development' : 'production',
   entry: './src/index.js',
   resolve: {
     alias: {
@@ -31,20 +25,16 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            plugins: [
-              isDevelopment && 'react-refresh/babel',
-            ].filter(Boolean),
+            plugins: [],
           },
         }],
       },
       {
         test: /\.css$/i,
         use: [
-          isDevelopment && 'style-loader',
-          !isDevelopment && MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-        ].filter(Boolean),
+        ],
       },
       {
         test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
@@ -63,11 +53,6 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    isDevelopment && new ReactRefreshWebpackPlugin(),
-    !isDevelopment && new MiniCssExtractPlugin({
-      filename: 'style.bundle.css',
-    }),
     new HtmlWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
-  ].filter(Boolean),
+  ],
 };
