@@ -64,11 +64,10 @@ module.exports = {
   },
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
-    new HtmlWebpackPlugin(),
     !isDevelopment && new MiniCssExtractPlugin({
       filename: 'style.bundle.css',
-      insert: 'document.head.appendChild(linkTag);', // check on this insertion order
     }),
+    new HtmlWebpackPlugin(),
     new BundleAnalyzerPlugin(),
   ].filter(Boolean),
 };
