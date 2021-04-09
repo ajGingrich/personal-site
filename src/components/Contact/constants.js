@@ -37,24 +37,3 @@ export const CONTACT_FORM = {
     [SPANISH]: '¡Contáctame!',
   },
 };
-
-const GITHUB = {
-  link: 'https://github.com/ajGingrich',
-  icon: 'github',
-};
-
-const STACK_OVERFLOW = {
-  link: 'http://stackoverflow.com/users/7096540/andrewgi?tab=profile',
-  icon: 'stack-overflow',
-};
-
-const LINKED_IN = {
-  link: 'http://stackoverflow.com/users/7096540/andrewgi?tab=profile',
-  icon: 'linkedin',
-};
-
-export const SOCIAL_NETWORKS = [
-  LINKED_IN,
-  GITHUB,
-  STACK_OVERFLOW,
-];

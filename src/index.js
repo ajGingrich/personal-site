@@ -4,9 +4,6 @@ import { Provider } from 'react-redux';
 
 import configureStore from './store';
 
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/css/all.css';
-
 import './app.css';
 
 import Root from './root';

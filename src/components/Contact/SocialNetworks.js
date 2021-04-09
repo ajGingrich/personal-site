@@ -6,9 +6,35 @@ import {
   Col,
   Button,
 } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow';
 
-import { SOCIAL_NETWORK_TITLE, SOCIAL_NETWORKS } from './constants';
+// add goodreads
+import { SOCIAL_NETWORK_TITLE } from './constants';
 import styles from './contact.module.css';
+
+const GITHUB = {
+  link: 'https://github.com/ajGingrich',
+  icon: faGithub,
+};
+
+const STACK_OVERFLOW = {
+  link: 'http://stackoverflow.com/users/7096540/andrewgi?tab=profile',
+  icon: faStackOverflow,
+};
+
+const LINKED_IN = {
+  link: 'http://stackoverflow.com/users/7096540/andrewgi?tab=profile',
+  icon: faLinkedin,
+};
+
+const SOCIAL_NETWORKS = [
+  LINKED_IN,
+  GITHUB,
+  STACK_OVERFLOW,
+];
 
 const SocialNetworks = ({ language }) => {
   return (
@@ -25,7 +51,7 @@ const SocialNetworks = ({ language }) => {
                 className={classnames('btn-default', styles.networkButton)}
                 onClick={() => window.location.replace(link)}
               >
-                <i className={`fab fa-${icon} fa-2x`} />
+                <FontAwesomeIcon icon={icon} size="2x" />
               </Button>
             </li>
           ))}

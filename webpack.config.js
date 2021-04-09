@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -63,9 +64,11 @@ module.exports = {
   },
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin(),
     !isDevelopment && new MiniCssExtractPlugin({
       filename: 'style.bundle.css',
+      insert: 'document.head.appendChild(linkTag);', // check on this insertion order
     }),
-    new HtmlWebpackPlugin(),
+    new BundleAnalyzerPlugin(),
   ].filter(Boolean),
 };
