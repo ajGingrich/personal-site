@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: personal-site-rs
+  labels:
+    app: personal-site
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: personal-site-pod
+      labels:
+        app: personal-site
+        type: front-end
+    spec:
+      containers:
+        - name: fe-container
+          image: coys3000/personal-site
+  replicas: 5
+  selector:
+    matchLabels:
+      type: front-end

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: personal-site-pod
+  labels:
+    app: personal-site
+    type: front-end
+spec:
+  containers:
+    - name: fe-container
+      image: coys3000/personal-site
