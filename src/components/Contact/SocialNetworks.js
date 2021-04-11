@@ -26,7 +26,7 @@ const STACK_OVERFLOW = {
 };
 
 const LINKED_IN = {
-  link: 'http://stackoverflow.com/users/7096540/andrewgi?tab=profile',
+  link: 'http://linked-in',
   icon: faLinkedin,
 };
 
@@ -44,7 +44,7 @@ const SocialNetworks = ({ language }) => {
         <ul className={styles.networks}>
           {SOCIAL_NETWORKS.map(({ link, icon }) => (
             <li
-              key={`social-network-${icon}`}
+              key={`social-network-${link}`}
               className={styles.listItem}
             >
               <Button

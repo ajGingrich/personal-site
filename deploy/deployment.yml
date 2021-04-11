@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: andrew-fe
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: fe-pod
+      labels:
+        app: fe
+        type: front-end
+    spec:
+      containers:
+        - name: fe-container
+          image: coys3000/personal-site
+          env:
+            - name: DEMO_GREETING
+              value: "Hello from the environment"
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
