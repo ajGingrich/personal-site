@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
-import About from 'components/About';
+import AboutMe from 'pages/AboutMe';
 import Footer from 'components/Footer';
 import WorkExperience from 'components/WorkExperience';
 import Contact from 'components/Contact';
@@ -17,9 +17,10 @@ const HomePage = () => {
   return (
     <Container className={styles.content}>
       <Switch>
-        <Route path="/about" component={About} />
+        <Route path="/about" component={AboutMe} />
         <Route path="/experience" component={WorkExperience} />
         <Route path="/contact" component={Contact} />
+        <Route path="/blog" component={Contact} />
         <Route component={FourOhFourError} />
       </Switch>
       <Footer />
