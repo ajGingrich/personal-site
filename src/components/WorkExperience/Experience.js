@@ -25,21 +25,22 @@ const Experience = ({
   const preciseDescription = description[language];
   const preciseStartDate = startDate[language];
   const preciseEndDate = endDate && endDate[language];
+  const precisionPosition = position[language];
   const englishDatePreposition = isCurrent ? 'since ' : '';
   const endDateText = `${isEnglish ? 'to' : 'hasta'} ${preciseEndDate}`;
 
   return (
     <Row>
-      <Col sm={3} xs={12}>
-        <img src={image} alt="" className={classnames('img-responsive', styles.image)} style={{ marginTop: imageMargin }} />
+      <Col lg={3} xs={12} className="text-center">
+        <img src={image} alt="" className={classnames('img-fluid', styles.image)} style={{ marginTop: imageMargin }} />
       </Col>
-      <Col sm={9} xs={12}>
+      <Col lg={9} xs={12} className={styles.experienceText}>
         <p className="noMargin">
           <span className={styles.company}>{company}</span>
         </p>
         <p className="noMargin">
           <span className={styles.workTitle}>
-            {position}
+            {precisionPosition}
             <span className={styles.workDates}>
               {`, ${isEnglish ? englishDatePreposition : 'desde '}${preciseStartDate} ${isCurrent ? '' : endDateText} `}
             </span>
@@ -64,7 +65,10 @@ Experience.propTypes = {
     spanish: PropTypes.string.isRequired,
   }).isRequired,
   location: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    english: PropTypes.string.isRequired,
+    spanish: PropTypes.string.isRequired,
+  }).isRequired,
   imageMargin: PropTypes.string,
   startDate: PropTypes.shape({
     english: PropTypes.string.isRequired,
