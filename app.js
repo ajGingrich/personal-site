@@ -10,7 +10,7 @@ app.use(favicon(path.join(__dirname, 'public', 'letterA.png')));
 
 // TODO: read this proxy from a config
 // const PROXY_ADDRESS = 'http://localhost:4041';
-const PROXY_ADDRESS = 'http://localhost:4041';
+const PROXY_ADDRESS = 'http://backend:4041';
 
 app.use('/api', proxy(PROXY_ADDRESS));
 
