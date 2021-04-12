@@ -9,15 +9,11 @@ import { CONTACT_TITLE } from './constants';
 import ContactForm from './ContactForm';
 import SocialNetworks from './SocialNetworks';
 
-// use the name
-const API_ENDPOINT = 'http://backend';
-// const API_ENDPOINT = 'http://localhost:4041';
-
 const Contact = () => {
   const language = useSelector(languageSelector);
 
   const handleClick = () => {
-    fetch(`${API_ENDPOINT}/user`)
+    fetch('/api/user')
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((err) => {
@@ -28,7 +24,7 @@ const Contact = () => {
   return (
     <section>
       <Button onClick={handleClick}>
-        Click Here!!!
+        Click me now!
       </Button>
       <Row>
         <Col md={12}>

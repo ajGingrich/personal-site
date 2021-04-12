@@ -1,24 +1,21 @@
-const http = require('http');
+const http = require('http'); // eslint-disable-line
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
+const proxy = require('express-http-proxy');
 
 const app = express();
 
 app.use(favicon(path.join(__dirname, 'public', 'letterA.png')));
 
-// const serveGzip = (contentType) => (req, res, next) => {
-//   req.url += '.gz';
-//   res.set('Content-Encoding', 'gzip');
-//   res.set('Content-Type', contentType);
-//
-//   next();
-// };
-//
-// app.get('*.js', serveGzip('text/javascript'));
-// app.get('*.css', serveGzip('text/css'));
+// TODO: read this proxy from a config
+// const PROXY_ADDRESS = 'http://localhost:4041';
+const PROXY_ADDRESS = 'http://localhost:4041';
+
+app.use('/api', proxy(PROXY_ADDRESS));
 
 app.use(express.static(path.join(__dirname, 'dist')));
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
