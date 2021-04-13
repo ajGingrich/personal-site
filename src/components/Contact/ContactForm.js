@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Row,
@@ -7,29 +7,74 @@ import {
   Button,
 } from 'react-bootstrap';
 
-import { CONTACT_DESCRIPTION } from './constants';
+import { CONTACT_DESCRIPTION, CONTACT_FORM } from './constants';
 
 const ContactForm = ({ language }) => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = () => {
+    console.log(firstName, lastName, email, phone, message);
+
+    fetch('/api/user')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => {
+        console.log(err)
+      });
+  };
+
   return (
     <Row>
-      <Col xs={12} md={{ span: 8, offset: 2 }} className="text-center">
+      <Col xs={12} md={{ span: 10, offset: 1 }} className="text-center">
         <p>{CONTACT_DESCRIPTION[language]}</p>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="contactFirstName">
+            <Form.Control
+              type="text"
+              placeholder={CONTACT_FORM.firstName[language]}
+              onChange={e => setFirstName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="contactLastName">
+            <Form.Control
+              type="text"
+              placeholder={CONTACT_FORM.lastName[language]}
+              onChange={e => setLastName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="contactEmail">
+            <Form.Control
+              type="email"
+              placeholder={CONTACT_FORM.email[language]}
+              onChange={e => setEmail(e.target.value)}
+            />
             <Form.Text className="text-muted">
-              {'We\'ll never share your email with anyone else.'}
+              {CONTACT_FORM.emailWarning[language]}
             </Form.Text>
           </Form.Group>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+          <Form.Group controlId="contactPhoneNumber">
+            <Form.Control
+              type="text"
+              placeholder={CONTACT_FORM.phone[language]}
+              onChange={e => setPhone(e.target.value)}
+            />
           </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+          <Form.Group controlId="contactMessage">
+            <Form.Control
+              as="textarea"
+              rows={5}
+              placeholder={CONTACT_FORM.message[language]}
+              onChange={e => setMessage(e.target.value)}
+            />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button
+            variant="primary"
+            type="submit"
+          >
             Submit
           </Button>
         </Form>

@@ -17,23 +17,31 @@ export const SOCIAL_NETWORK_TITLE = {
 
 export const CONTACT_FORM = {
   firstName: {
-    [ENGLISH]: 'Get in Touch!',
-    [SPANISH]: '¡Contáctame!',
+    [ENGLISH]: 'First Name',
+    [SPANISH]: 'Nombre',
   },
   lastName: {
-    [ENGLISH]: 'Get in Touch!',
-    [SPANISH]: '¡Contáctame!',
+    [ENGLISH]: 'Last Name',
+    [SPANISH]: 'Apellido',
   },
   email: {
-    [ENGLISH]: 'Get in Touch!',
-    [SPANISH]: '¡Contáctame!',
+    [ENGLISH]: 'Email Address',
+    [SPANISH]: 'Correo Electrónico',
+  },
+  emailWarning: {
+    [ENGLISH]: 'I\'ll never share your email with anyone else.',
+    [SPANISH]: 'I\'ll never share your email with anyone else.',
   },
   phone: {
-    [ENGLISH]: 'Get in Touch!',
-    [SPANISH]: '¡Contáctame!',
+    [ENGLISH]: 'Phone Number',
+    [SPANISH]: 'Número de Teléfono',
   },
   message: {
-    [ENGLISH]: 'Get in Touch!',
-    [SPANISH]: '¡Contáctame!',
+    [ENGLISH]: 'Message',
+    [SPANISH]: 'Mensaje',
+  },
+  submit: {
+    [ENGLISH]: 'Submit',
+    [SPANISH]: 'Enviar',
   },
 };

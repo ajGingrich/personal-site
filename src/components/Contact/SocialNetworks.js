@@ -5,13 +5,16 @@ import {
   Row,
   Col,
   Button,
+  ListGroup,
 } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
+import { faGoodreads } from '@fortawesome/free-brands-svg-icons/faGoodreads';
 
-// add goodreads
 import { SOCIAL_NETWORK_TITLE } from './constants';
 import styles from './contact.module.css';
 
@@ -26,14 +29,32 @@ const STACK_OVERFLOW = {
 };
 
 const LINKED_IN = {
-  link: 'http://linked-in',
+  link: 'https://www.linkedin.com/in/andrew-gingrich/',
   icon: faLinkedin,
+};
+
+const INSTAGRAM = {
+  link: 'https://www.instagram.com/gingrich_andrew/',
+  icon: faInstagram,
+};
+
+const TWITTER = {
+  link: 'https://twitter.com/coys3000',
+  icon: faTwitter,
+};
+
+const GOOD_READS = {
+  link: 'https://www.goodreads.com/user/show/104514401-andrew-gingrich',
+  icon: faGoodreads,
 };
 
 const SOCIAL_NETWORKS = [
   LINKED_IN,
   GITHUB,
   STACK_OVERFLOW,
+  INSTAGRAM,
+  TWITTER,
+  GOOD_READS,
 ];
 
 const SocialNetworks = ({ language }) => {
@@ -41,7 +62,7 @@ const SocialNetworks = ({ language }) => {
     <Row>
       <Col xs={12} md={{ span: 8, offset: 2 }} className="text-center">
         <p>{SOCIAL_NETWORK_TITLE[language]}</p>
-        <ul className={styles.networks}>
+        <ListGroup horizontal="sm" className={classnames('justify-content-center', styles.networks)}>
           {SOCIAL_NETWORKS.map(({ link, icon }) => (
             <li
               key={`social-network-${link}`}
@@ -55,7 +76,7 @@ const SocialNetworks = ({ language }) => {
               </Button>
             </li>
           ))}
-        </ul>
+        </ListGroup>
       </Col>
     </Row>
   );

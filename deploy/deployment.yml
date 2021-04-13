@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   name: frontend
   labels:
-    app: andrewgingrich
+    app: irazu
     tier: frontend
     track: stable
 spec:
   template:
     metadata:
       labels:
-        app: andrewgingrich
+        app: irazu
         tier: frontend
         track: stable
     spec:
@@ -20,6 +20,6 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: andrewgingrich
+      app: irazu
       tier: frontend
       track: stable

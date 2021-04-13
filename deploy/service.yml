@@ -8,5 +8,5 @@ spec:
     - targetPort: 4040
       port: 4040
   selector:
-    app: andrewgingrich
+    app: irazu
     tier: frontend
