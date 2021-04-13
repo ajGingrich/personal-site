@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: irazu
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: andrewgingrich-us
+  labels:
+    app: irazu
+spec:
+  backend:
+    serviceName: frontend
+    servicePort: 4040

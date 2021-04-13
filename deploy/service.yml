@@ -3,8 +3,7 @@ kind: Service
 metadata:
   name: frontend
 spec:
-  type: LoadBalancer
-  loadBalancerIP: 35.193.198.194
+  type: NodePort
   ports:
     - port: 4040
   selector:
