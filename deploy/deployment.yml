@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site
-  replicas: 3
+          image: coys3000/personal-site:1.0
+  replicas: 2
   selector:
     matchLabels:
       app: irazu
