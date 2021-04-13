@@ -4,9 +4,9 @@ metadata:
   name: frontend
 spec:
   type: LoadBalancer
+  loadBalancerIP: 35.193.198.194
   ports:
-    - targetPort: 4040
-      port: 4040
+    - port: 4040
   selector:
     app: irazu
     tier: frontend
