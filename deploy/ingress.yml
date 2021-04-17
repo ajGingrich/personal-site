@@ -1,12 +1,23 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: irazu
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: andrewgingrich
+    kubernetes.io/ingress.class: nginx
+  name: irazu
   labels:
     app: irazu
 spec:
-  backend:
-    serviceName: frontend
-    servicePort: 4040
+  rules:
+    - host: andrewgingrich.com
+      http:
+        paths:
+          - backend:
+              serviceName: frontend
+              servicePort: 4040
+            path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    # tls:
+    #     - hosts:
+    #         - www.example.com
+    #       secretName: example-tls
+    # kubernetes.io/ingress.global-static-ip-name: andrewgingrich
