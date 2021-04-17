@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: irazu
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: andrewgingrich-us
+    kubernetes.io/ingress.global-static-ip-name: andrewgingrich
   labels:
     app: irazu
 spec:

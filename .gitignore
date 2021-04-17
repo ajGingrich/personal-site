@@ -1,5 +1,8 @@
 node_modules/
 dist/
 
+# yarn
+yarn-error.log
+
 # mac
 .DS_Store
