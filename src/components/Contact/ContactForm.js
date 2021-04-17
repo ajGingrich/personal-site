@@ -16,8 +16,8 @@ const ContactForm = ({ language }) => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
-    console.log(firstName, lastName, email, phone, message);
+  const handleSubmit = e => {
+    e.preventDefault();
 
     fetch('/api/user')
       .then(response => response.json())
@@ -74,6 +74,7 @@ const ContactForm = ({ language }) => {
           <Button
             variant="primary"
             type="submit"
+            onClick={handleSubmit}
           >
             Submit
           </Button>

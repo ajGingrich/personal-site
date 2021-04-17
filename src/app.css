@@ -17,7 +17,6 @@ h4,
 h5,
 h6 {
   margin: 0 0 35px;
-  /*text-transform: uppercase;*/
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -55,8 +54,6 @@ section {
 }
 a {
   color: #42DCA3;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 a:hover,
@@ -65,38 +62,11 @@ a:focus {
   color: #1d9b6c;
 }
 
-/*mobile display*/
-.content-section {
-  padding-top: 25px;
-}
-
-.portfolio-section {
-  width: 100%;
-  padding: 30px 0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-.dividerTop {
-  margin-top: -25px;
-}
-#portfolio div.container div.row {
-  margin-top: 25px;
-}
 hr {
   border: 1px solid black;
 }
 
-/*Larger displays*/
-@media (min-width: 767px) {
-  .content-section {
-    padding-top: 75px;
-  }
-  #portfolio {
-    padding: 40px 0;
-  }
-}
+/* TODO: move this to contact section */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -116,43 +86,4 @@ hr {
   outline: none;
   color: black;
   background-color: #e84ac0;
-}
-
-/* TODO: move to footer */
-footer {
-  padding: 30px 0;
-}
-
-footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-::selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-img::selection {
-  background: transparent;
-}
-img::-moz-selection {
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
-
-/*portfolio pages*/
-#portfolio .page2,
-#portfolio .page3 {
-  display: none
-}
-.pagination li:hover {
-  cursor: pointer;
 }

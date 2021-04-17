@@ -27,7 +27,12 @@ const Interests = () => {
       <Row>
         <Col xs={12} className="text-center">
           <Carousel>
-            {INTERESTS_SLIDESHOW.map(({ image, title, description }) => {
+            {INTERESTS_SLIDESHOW.map(({
+              image,
+              title,
+              description,
+              style = {},
+            }) => {
               return (
                 <Carousel.Item key={`interet-carousel-${image}`}>
                   <img
@@ -36,10 +41,10 @@ const Interests = () => {
                     alt="First slide"
                   />
                   <Carousel.Caption>
-                    <h3 className={classnames(styles.captionTitle)}>
+                    <h3 className={classnames(styles.captionTitle)} style={style}>
                       {title[language]}
                     </h3>
-                    <p className={classnames('.d-none .d-sm-block')}>
+                    <p className={classnames('d-none', 'd-sm-block')} style={style}>
                       {description[language]}
                     </p>
                   </Carousel.Caption>

@@ -67,6 +67,7 @@ const CHESS = {
 
 const READING = {
   image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_reading.jpg',
+  style: { color: 'black' },
   title: {
     [ENGLISH]: 'Reading',
     [SPANISH]: 'Leer',

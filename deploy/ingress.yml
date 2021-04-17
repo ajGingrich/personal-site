@@ -16,7 +16,15 @@ spec:
               serviceName: frontend
               servicePort: 4040
             path: /
+    - host: www.andrewgingrich.com
+      http:
+        paths:
+          - backend:
+              serviceName: frontend
+              servicePort: 4040
+            path: /
   tls:
     - hosts:
       - andrewgingrich.com
+      - www.andrewgingrich.com
       secretName: irazu-tls
