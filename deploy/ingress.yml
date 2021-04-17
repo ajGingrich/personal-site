@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
   name: irazu
   labels:
     app: irazu
@@ -15,9 +16,7 @@ spec:
               serviceName: frontend
               servicePort: 4040
             path: /
-    # This section is only required if TLS is to be enabled for the Ingress
-    # tls:
-    #     - hosts:
-    #         - www.example.com
-    #       secretName: example-tls
-    # kubernetes.io/ingress.global-static-ip-name: andrewgingrich
+  tls:
+    - hosts:
+      - andrewgingrich.com
+      secretName: irazu-tls
