@@ -7,6 +7,7 @@ import {
 
 const defaultState = {
   page: 1,
+  count: 0,
   loading: false,
   currentPost: {},
   posts: [],
@@ -25,7 +26,9 @@ const butterReducer = (state = defaultState, action) => {
         ...state,
         loading: false,
         error: false,
-        posts: action.payload,
+        posts: action.payload.posts,
+        count: action.payload.count,
+        page: action.payload.page,
       };
     case FETCH_POST_SUCCESS:
       return {

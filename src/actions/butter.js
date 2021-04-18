@@ -18,7 +18,11 @@ export const fetchPostListActionCreator = ({
     const response = await butter.post.list({ page, page_size: size });
     dispatch({
       type: FETCH_POST_LIST_SUCCESS,
-      payload: response.data.data,
+      payload: {
+        count: response.data.meta.count,
+        posts: response.data.data,
+        page,
+      },
     });
   } catch (e) {
     dispatch({ type: FETCH_POST_ERROR });

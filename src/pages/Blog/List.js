@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
-import { useLocation, Link, useRouteMatch } from 'react-router-dom';
-import qs from 'query-string';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchPostListActionCreator } from 'actions/butter';
 import { butterLoadingSelector, butterPostsSelector } from 'selectors/butter';
-
-import { DEFAULT_PAGE_SIZE } from 'constants/constants';
 
 import PostTitle from './components/PostTitle';
 import Loader from './components/Loader';
@@ -17,13 +14,11 @@ const List = () => {
   const dispatch = useDispatch();
   const loading = useSelector(butterLoadingSelector);
   const posts = useSelector(butterPostsSelector);
-  const { search } = useLocation();
   const { url } = useRouteMatch();
-  const { page } = qs.parse(search);
 
   useEffect(() => {
     if (!posts.length) {
-      dispatch(fetchPostListActionCreator({ page, pageSize: DEFAULT_PAGE_SIZE }));
+      dispatch(fetchPostListActionCreator({}));
     }
   }, []);
 

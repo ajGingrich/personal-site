@@ -23,6 +23,7 @@
 .navbarCustom {
   background-color: #FFFFFF !important;
   border-bottom: 1px solid black;
+  margin-bottom: 10px;
 }
 
 .postImage {
@@ -43,4 +44,24 @@
   align-items: center;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333333;
+}
+
+.pagination {
+  margin: auto;
+}
+
+.pageIndicator {
+  margin: 0 10px;
+}
+
+.pageArrow:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  color: #808080;
+}
+
+.disabled:hover {
+  cursor: default;
 }
