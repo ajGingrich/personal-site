@@ -16,7 +16,15 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site:1.2
+          image: coys3000/personal-site:1.22
+          env:
+          - name: MAILER
+            value: "http://backend:4041"
+          - name: BUTTERCMS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: butter
+                key: buttercms
   replicas: 2
   selector:
     matchLabels:

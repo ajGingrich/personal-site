@@ -6,8 +6,7 @@ export const FETCH_POST_LIST_LOADING = 'FETCH_POST_LIST_LOADING';
 export const FETCH_POST_LIST_SUCCESS = 'FETCH_POST_LIST_SUCCESS';
 export const FETCH_POST_LIST_ERROR = 'FETCH_POST_LIST_ERROR';
 
-const API_KEY = 'nope';
-const butter = Butter(API_KEY);
+const butter = Butter(process.env.BUTTERCMS_KEY);
 
 export const fetchPostListActionCreator = ({
   page = 1,
@@ -22,6 +21,5 @@ export const fetchPostListActionCreator = ({
     });
   } catch (e) {
     dispatch({ type: FETCH_POST_LIST_ERROR });
-    console.log(e);
   }
 };

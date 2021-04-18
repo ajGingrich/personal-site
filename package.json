@@ -29,6 +29,8 @@
     "buttercms": "^1.2.7",
     "classnames": "^2.3.1",
     "css-loader": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^7.0.2",
     "express": "^4.17.1",
     "express-http-proxy": "^1.6.2",
     "html-webpack-plugin": "^5.3.1",

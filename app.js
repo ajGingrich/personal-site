@@ -3,16 +3,13 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const proxy = require('express-http-proxy');
+require('dotenv').config();
 
 const app = express();
 
 app.use(favicon(path.join(__dirname, 'public', 'letterA.png')));
 
-// TODO: read this proxy from a config
-// const PROXY_ADDRESS = 'http://localhost:4041';
-const PROXY_ADDRESS = 'http://backend:4041';
-
-app.use('/api', proxy(PROXY_ADDRESS));
+app.use('/api', proxy(process.env.MAILER));
 
 app.use(express.static(path.join(__dirname, 'dist')));
 

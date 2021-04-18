@@ -14,3 +14,8 @@
 .postLink a:hover {
   text-decoration: none;
 }
+
+.title {
+  display: flex;
+  align-items: center;
+}

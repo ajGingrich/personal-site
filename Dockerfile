@@ -16,7 +16,6 @@ RUN npm install --only=production
 COPY . .
 
 # build the react client
-
 EXPOSE 4040
 
 CMD [ "npm", "start" ]
