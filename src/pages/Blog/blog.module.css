@@ -35,15 +35,20 @@
   color: black;
 }
 
-.postLink h1 {
-  margin: 10px 0;
+.postLink:hover {
+  text-decoration: none;
 }
 
-.title {
+.postTitle {
   display: flex;
   align-items: center;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333333;
+}
+
+.postTitle h1 {
+  margin: 10px 0;
+  display: inline;
 }
 
 .pagination {
