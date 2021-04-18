@@ -11,3 +11,8 @@ export const butterPostsSelector = createSelector(
   butterSelector,
   ({ posts }) => posts || [],
 );
+
+export const currentPostSelector = createSelector(
+  butterSelector,
+  ({ currentPost }) => currentPost || {},
+);

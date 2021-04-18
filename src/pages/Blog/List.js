@@ -2,12 +2,14 @@ import React, { useEffect } from 'react';
 import { useLocation, Link, useRouteMatch } from 'react-router-dom';
 import qs from 'query-string';
 import { useSelector, useDispatch } from 'react-redux';
-import { Spinner } from 'react-bootstrap';
 
 import { fetchPostListActionCreator } from 'actions/butter';
 import { butterLoadingSelector, butterPostsSelector } from 'selectors/butter';
 
 import { DEFAULT_PAGE_SIZE } from 'constants/constants';
+
+import PostTitle from './components/PostTitle';
+import Loader from './components/Loader';
 
 import styles from './blog.module.css';
 
@@ -26,25 +28,21 @@ const List = () => {
   }, []);
 
   if (loading) {
-    return (
-      <Spinner animation="border" role="status">
-        <span className="sr-only">Loading...</span>
-      </Spinner>
-    );
+    return <Loader />;
   }
 
   return (
     <>
-      {posts.map(({ title, slug, summary, featured_image }) => (
+      {posts.map(({ title, slug, summary, featured_image: image }) => (
         <Link
           to={`${url}/post/${slug}`}
           key={slug}
           className={styles.postLink}
         >
-          <h1 className={styles.title}>
-            {title}
-            <img className={styles.postImage} src={featured_image} alt="" />
-          </h1>
+          <PostTitle
+            title={title}
+            image={image}
+          />
           <p>{summary}</p>
         </Link>
       ))}
