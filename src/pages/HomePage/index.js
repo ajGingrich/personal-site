@@ -6,7 +6,6 @@ import {
 import { Container } from 'react-bootstrap';
 
 import AboutMe from 'pages/AboutMe';
-import Blog from 'pages/Blog';
 import Footer from 'components/Footer';
 import WorkExperience from 'components/WorkExperience';
 import Contact from 'components/Contact';
@@ -21,7 +20,6 @@ const HomePage = () => {
         <Route path="/about" component={AboutMe} />
         <Route path="/experience" component={WorkExperience} />
         <Route path="/contact" component={Contact} />
-        <Route path="/blog" component={Blog} />
         <Route component={FourOhFourError} />
       </Switch>
       <Footer />

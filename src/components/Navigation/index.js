@@ -10,7 +10,13 @@ const Navigation = () => {
   const history = useHistory();
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className={styles.navbarCustom}>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      expand="lg"
+      className={styles.navbarCustom}
+      sticky="top"
+    >
       <Container>
         <Navbar.Brand>
           <LanguageFlag />

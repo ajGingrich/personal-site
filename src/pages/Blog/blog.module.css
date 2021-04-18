@@ -1,3 +1,30 @@
+.container {
+  background-color: #FFFFFF;
+  font-size: 14px;
+  color: black;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container .align-center {
+  text-align: center
+}
+
+.container pre {
+  padding: 10px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  color: white;
+}
+
+.navbarCustom {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid black;
+}
+
 .postImage {
   margin: 10px;
   width: 30px;
@@ -8,14 +35,12 @@
 }
 
 .postLink h1 {
-  margin: 10px;
-}
-
-.postLink a:hover {
-  text-decoration: none;
+  margin: 10px 0;
 }
 
 .title {
   display: flex;
   align-items: center;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #333333;
 }
