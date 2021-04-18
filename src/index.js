@@ -9,7 +9,7 @@ import './app.css';
 
 import Root from './root';
 
-const render = (Component) => {
+const render = Component => {
   ReactDOM.render(
     <Provider store={configureStore()}>
       <Component />

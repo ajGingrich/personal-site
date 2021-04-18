@@ -6,7 +6,7 @@ export const FETCH_POST_LIST_LOADING = 'FETCH_POST_LIST_LOADING';
 export const FETCH_POST_LIST_SUCCESS = 'FETCH_POST_LIST_SUCCESS';
 export const FETCH_POST_LIST_ERROR = 'FETCH_POST_LIST_ERROR';
 
-const API_KEY = 'not the actual totken';
+const API_KEY = 'nope';
 const butter = Butter(API_KEY);
 
 export const fetchPostListActionCreator = ({

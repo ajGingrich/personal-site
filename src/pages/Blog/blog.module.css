@@ -1,0 +1,16 @@
+.postImage {
+  margin: 10px;
+  width: 30px;
+}
+
+.postLink {
+  color: black;
+}
+
+.postLink h1 {
+  margin: 10px;
+}
+
+.postLink a:hover {
+  text-decoration: none;
+}

@@ -20,7 +20,7 @@ const HIKING = {
 const SCUBA_DIVING = {
   image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_scuba.jpeg',
   title: {
-    [ENGLISH]: 'Skydiving',
+    [ENGLISH]: 'Scuba Diving',
     [SPANISH]: 'Buceo',
   },
   description: {
@@ -56,7 +56,7 @@ const RUNNING = {
 const CHESS = {
   image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_chess.jpg',
   title: {
-    [ENGLISH]: 'Hiking and Camping',
+    [ENGLISH]: 'Chess',
     [SPANISH]: 'Ajedrez',
   },
   description: {
