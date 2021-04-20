@@ -8,7 +8,7 @@ import {
   ABOUT_ME_TITLE,
   SKILLS_INFORMATION,
   ABOUT_DESCRIPTION,
-} from './text';
+} from './constants';
 import styles from './about.module.css';
 
 const About = () => {
