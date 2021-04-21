@@ -30,10 +30,35 @@ export const SKILLS_RATINGS = {
 
 // Data and Analytics
 // Dev Ops
-// Backend
 // Frontend
 // Development Tools
 // Other?
+
+const LANGUAGES = {
+  title: 'Languages',
+  skills: [
+    {
+      name: 'JavaScript',
+      level: SKILL_CATEGORY_STRONG,
+    },
+    {
+      name: 'Java',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Python',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Ruby',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'C',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+  ],
+};
 
 const FRONT_END = {
   title: 'Front End',
@@ -43,8 +68,8 @@ const FRONT_END = {
       level: SKILL_CATEGORY_STRONG,
     },
     {
-      name: 'ExpressJS',
-      level: SKILL_CATEGORY_COMFORTABLE,
+      name: 'HTML/CSS',
+      level: SKILL_CATEGORY_STRONG,
     },
     {
       name: 'AngularJS',
@@ -53,6 +78,46 @@ const FRONT_END = {
   ],
 };
 
+const BACK_END = {
+  title: 'Back End',
+  skills: [
+    {
+      name: 'Docker',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'ExpressJS',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Node',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Ruby on Rails',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Hibernate',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+    {
+      name: 'MySQL',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'PostgreSQL',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Spring Boot',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+  ],
+};
+
 export const SKILLS_CATEGORIES = [
+  LANGUAGES,
   FRONT_END,
+  BACK_END,
 ];

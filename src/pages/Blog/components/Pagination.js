@@ -18,6 +18,10 @@ const Pagination = () => {
   const isFirstPage = page === 1;
   const isLastPage = page === numPages;
 
+  if (!count) {
+    return null;
+  }
+
   const handlePageBack = () => {
     if (isFirstPage) return null;
 

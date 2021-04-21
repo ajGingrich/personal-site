@@ -20,7 +20,7 @@ const List = () => {
     if (!posts.length) {
       dispatch(fetchPostListActionCreator({}));
     }
-  }, []);
+  }, [dispatch, posts]);
 
   if (loading) {
     return <Loader />;
@@ -28,7 +28,12 @@ const List = () => {
 
   return (
     <>
-      {posts.map(({ title, slug, summary, featured_image: image }) => (
+      {posts.map(({
+        title,
+        slug,
+        summary,
+        featured_image: image,
+      }) => (
         <Link
           to={`${url}/post/${slug}`}
           key={slug}
