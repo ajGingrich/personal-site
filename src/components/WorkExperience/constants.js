@@ -1,8 +1,13 @@
 import { ENGLISH, SPANISH } from 'constants/constants';
 
 export const WORK_EXPERIENCE_TITLE = {
-  [ENGLISH]: 'What I\'ve Done',
-  [SPANISH]: 'Lo Que He Hecho',
+  [ENGLISH]: 'Professional',
+  [SPANISH]: 'Profesional',
+};
+
+export const EDUCATION_TITLE = {
+  [ENGLISH]: 'Education',
+  [SPANISH]: 'Educación',
 };
 
 const GORILLA_LOGIC = {
@@ -122,5 +127,8 @@ export const POSITIONS = [
   AVANTICA,
   SBR,
   WRA,
+];
+
+export const EDUCATION = [
   VIRGINIA_TECH,
 ];

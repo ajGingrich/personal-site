@@ -19,20 +19,14 @@ export const SKILLS_RATINGS = {
     [SPANISH]: 'Fuerte',
   },
   comfortable: {
-    [ENGLISH]: 'Comfortable',
+    [ENGLISH]: 'Proficient',
     [SPANISH]: 'Comdo',
   },
   [SKILL_CATEGORY_FAMILIAR]: {
-    [ENGLISH]: 'Some Familiarity',
+    [ENGLISH]: 'Familiar',
     [SPANISH]: 'Algun Conocomiento',
   },
 };
-
-// Data and Analytics
-// Dev Ops
-// Frontend
-// Development Tools
-// Other?
 
 const LANGUAGES = {
   title: 'Languages',
@@ -60,6 +54,62 @@ const LANGUAGES = {
   ],
 };
 
+const DEV_OPS = {
+  title: 'Dev Ops',
+  skills: [
+    {
+      name: 'Google Cloud',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Kubernetes',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Docker',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'AWS',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+  ],
+};
+
+const DEVELOPMENT_TOOLS = {
+  title: 'Development Tools',
+  skills: [
+    {
+      name: 'Git',
+      level: SKILL_CATEGORY_STRONG,
+    },
+    {
+      name: 'NPM/Yarn',
+      level: SKILL_CATEGORY_STRONG,
+    },
+    {
+      name: 'Gradle',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+    {
+      name: 'Pip',
+      level: SKILL_CATEGORY_FAMILIAR,
+    },
+    {
+      name: 'Atom',
+      level: SKILL_CATEGORY_STRONG,
+    },
+    {
+      name: 'IntelliJ Idea',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
+      name: 'Vim',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+  ],
+};
+
 const FRONT_END = {
   title: 'Front End',
   skills: [
@@ -72,6 +122,14 @@ const FRONT_END = {
       level: SKILL_CATEGORY_STRONG,
     },
     {
+      name: 'Bootstrap',
+      level: SKILL_CATEGORY_STRONG,
+    },
+    {
+      name: 'jQuery',
+      level: SKILL_CATEGORY_COMFORTABLE,
+    },
+    {
       name: 'AngularJS',
       level: SKILL_CATEGORY_FAMILIAR,
     },
@@ -81,10 +139,6 @@ const FRONT_END = {
 const BACK_END = {
   title: 'Back End',
   skills: [
-    {
-      name: 'Docker',
-      level: SKILL_CATEGORY_COMFORTABLE,
-    },
     {
       name: 'ExpressJS',
       level: SKILL_CATEGORY_COMFORTABLE,
@@ -120,4 +174,6 @@ export const SKILLS_CATEGORIES = [
   LANGUAGES,
   FRONT_END,
   BACK_END,
+  DEV_OPS,
+  DEVELOPMENT_TOOLS,
 ];

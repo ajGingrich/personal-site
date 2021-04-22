@@ -6,7 +6,6 @@ import { languageSelector } from 'selectors/language';
 
 import {
   ABOUT_ME_TITLE,
-  SKILLS_INFORMATION,
   ABOUT_DESCRIPTION,
 } from './constants';
 import styles from './about.module.css';
@@ -36,22 +35,10 @@ const About = () => {
             {ABOUT_DESCRIPTION.details[language]}
           </p>
           <p className={styles.introText}>
+            {ABOUT_DESCRIPTION.quoteHeader[language]}
+          </p>
+          <p className={styles.introText}>
             {ABOUT_DESCRIPTION.quote[language]}
-          </p>
-          <h5 className={styles.skillsHeader}>
-            {SKILLS_INFORMATION.header[language]}
-          </h5>
-          <p className={styles.introText}>
-            <span className="underline">
-              {`${SKILLS_INFORMATION.strong[language]}:`}
-            </span>
-            &nbsp;JavaScript, Java, HTML/CSS, React/Redux, Node
-          </p>
-          <p className={styles.introText}>
-            <span className="underline">
-              {`${SKILLS_INFORMATION.knowledgable[language]}:`}
-            </span>
-            &nbsp;C, Python, Ruby on Rails
           </p>
         </Col>
       </Row>
