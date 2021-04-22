@@ -5,6 +5,8 @@ import DOMPurify from 'dompurify';
 
 import { fetchPostActionCreator } from 'actions/butter';
 import { currentPostSelector, butterLoadingSelector } from 'selectors/butter';
+import PgnViewer from 'components/PgnViewer';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 import PostTitle from './components/PostTitle';
 import Loader from './components/Loader';
@@ -40,7 +42,16 @@ const Post = () => {
         title={title}
         image={image}
       />
-      <div dangerouslySetInnerHTML={{ __html: cleanBody }} />
+      <ErrorBoundary>
+        <PgnViewer
+          blackSquareColour="steelBlue"
+          nodeToModify="pre code"
+          nodeModification={() => {}}
+          innerHTML
+        >
+          {body}
+        </PgnViewer>
+      </ErrorBoundary>
     </div>
   );
 };
