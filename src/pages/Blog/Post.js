@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import DOMPurify from 'dompurify';
 
 import { fetchPostActionCreator } from 'actions/butter';
 import { currentPostSelector, butterLoadingSelector } from 'selectors/butter';
 
 import PostTitle from './components/PostTitle';
 import Loader from './components/Loader';
+import PostContent from './components/PostContent';
 
 const Post = () => {
   const post = useSelector(currentPostSelector);
@@ -20,11 +20,10 @@ const Post = () => {
     body,
     featured_image: image,
   } = post;
-  const cleanBody = DOMPurify.sanitize(body);
 
   useEffect(() => {
     dispatch(fetchPostActionCreator(slug));
-  }, []);
+  }, [slug, dispatch]);
 
   if (loading) {
     return <Loader />;
@@ -40,7 +39,7 @@ const Post = () => {
         title={title}
         image={image}
       />
-      <div dangerouslySetInnerHTML={{ __html: cleanBody }} />
+      <PostContent body={body} />
     </div>
   );
 };
