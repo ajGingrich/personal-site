@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import {
   HashRouter as Router,
   Route,
@@ -6,19 +6,23 @@ import {
 } from 'react-router-dom';
 
 import Navigation from 'components/Navigation';
-import Welcome from 'components/Welcome';
-import HomePage from 'pages/HomePage';
-import Blog from 'pages/Blog';
+import PageLoader from 'components/PageLoader';
+
+const Welcome = lazy(() => import('./components/Welcome'));
+const HomePage = lazy(() => import('./pages/HomePage'));
+const Blog = lazy(() => import('./pages/Blog'));
 
 const Routes = () => {
   return (
     <Router>
       <Navigation />
-      <Switch>
-        <Route exact path="/" component={Welcome} />
-        <Route path="/blog" component={Blog} />
-        <Route component={HomePage} />
-      </Switch>
+      <Suspense fallback={<PageLoader />}>
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route path="/blog" component={Blog} />
+          <Route component={HomePage} />
+        </Switch>
+      </Suspense>
     </Router>
   );
 };

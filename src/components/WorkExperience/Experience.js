@@ -78,12 +78,13 @@ Experience.propTypes = {
     english: PropTypes.string,
     spanish: PropTypes.string,
   }),
-  isCurrent: PropTypes.bool.isRequired,
+  isCurrent: PropTypes.bool,
 };
 
 Experience.defaultProps = {
   imageMargin: '10px',
   endDate: null,
+  isCurrent: false,
 };
 
 export default Experience;
