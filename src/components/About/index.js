@@ -26,7 +26,7 @@ const About = () => {
         <Col sm={3} xs={12} className="text-center">
           <img
             className="img-responsive center-xs"
-            src="https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/about_formal.png"
+            src="https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/about_formal.webp"
             alt=""
           />
         </Col>
