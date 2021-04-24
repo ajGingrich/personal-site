@@ -5,17 +5,14 @@ ENV NODE_ENV=production
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# TODO: change to yarn
+# Install app dependencies for production
 COPY ["package.json", "./"]
-
-# Install only for production
 RUN npm install --only=production
 
 # copy app source
 COPY . .
 
-# build the react client
 EXPOSE 4040
 
+# build the react client
 CMD [ "npm", "start" ]
