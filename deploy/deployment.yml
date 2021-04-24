@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site:1.24
+          image: coys3000/personal-site:1.25
           env:
           - name: MAILER
             value: "http://backend:4041"
