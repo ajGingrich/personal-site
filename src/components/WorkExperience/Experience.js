@@ -35,10 +35,10 @@ const Experience = ({
         <img src={image} alt="" className={classnames('img-fluid', styles.image)} style={{ marginTop: imageMargin }} />
       </Col>
       <Col lg={9} xs={12} className={styles.experienceText}>
-        <p className="noMargin">
+        <p className={styles.noMargin}>
           <span className={styles.company}>{company}</span>
         </p>
-        <p className="noMargin">
+        <p className={styles.noMargin}>
           <span className={styles.workTitle}>
             {precisionPosition}
             <span className={styles.workDates}>
@@ -46,7 +46,7 @@ const Experience = ({
             </span>
           </span>
         </p>
-        <p className={classnames('noMargin', styles.locationParagraph)}>
+        <p className={styles.noMargin}>
           <span className={styles.workLocation}>{location}</span>
         </p>
         <p className={styles.workDescription}>

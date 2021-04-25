@@ -7,7 +7,7 @@ import './app.css';
 
 import configureStore from './store';
 
-import Root from './root';
+import Routes from './routes';
 
 const render = Component => {
   ReactDOM.render(
@@ -18,4 +18,4 @@ const render = Component => {
   );
 };
 
-render(Root);
+render(Routes);

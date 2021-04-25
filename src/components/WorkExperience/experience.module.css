@@ -28,11 +28,12 @@
   color: #3c3d37;
 }
 
-.locationParagraph {
-  margin-bottom: 10px;
-}
-
 .workDescription {
   text-align: left;
   font-size: 14px;
+  margin-top: 10px;
+}
+
+.noMargin {
+  margin: 0;
 }

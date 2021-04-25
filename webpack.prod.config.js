@@ -8,7 +8,9 @@ config.mode = 'production';
 config.module.rules[1].use.unshift(MiniCssExtractPlugin.loader);
 
 // TODO: remove bootstrap from bundle? insert: '#some-element',
-config.plugins.unshift(new MiniCssExtractPlugin());
+config.plugins.unshift(new MiniCssExtractPlugin({
+  insert: '#title',
+}));
 
 config.plugins.push(new CompressionPlugin({
   algorithm: 'gzip',
