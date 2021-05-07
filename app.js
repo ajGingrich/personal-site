@@ -4,7 +4,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const proxy = require('express-http-proxy');
 const expressStaticGzip = require('express-static-gzip');
-const config = require('./config');
+const config = require('./config/config.json');
 
 const app = express();
 
