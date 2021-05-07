@@ -1,0 +1,6 @@
+{
+  "mailer": {
+      "host": "localhost",
+      "port": "4041"
+  }
+}
