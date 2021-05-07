@@ -12,6 +12,7 @@ module.exports = {
       pages: path.resolve(__dirname, 'src/pages/'),
       reducers: path.resolve(__dirname, 'src/reducers/'),
       selectors: path.resolve(__dirname, 'src/selectors/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
     },
   },
   module: {
