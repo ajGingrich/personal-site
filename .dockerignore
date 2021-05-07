@@ -4,5 +4,5 @@ dist
 
 .env
 
-# kuberntes will mount this config
-server/config.json
+# k8s will mount this config
+config.json

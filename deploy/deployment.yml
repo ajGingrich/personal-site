@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site:configmap-wip-1.0
+          image: coys3000/personal-site:configmap-wip-1.2
           volumeMounts:
             - name: irazu-volume
-              mountPath: /usr/src/app/server
+              mountPath: /usr/src/app
       volumes:
         - name: irazu-volume
           configMap:
