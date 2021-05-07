@@ -19,7 +19,19 @@ const ContactForm = ({ language }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    fetch('/api/user')
+    const params = {
+      firstName,
+      lastName,
+      email,
+      message,
+      phone,
+    };
+
+    fetch('/api/mailer/email/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    })
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(err => {

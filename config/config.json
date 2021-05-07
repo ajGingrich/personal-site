@@ -1,6 +1,10 @@
 {
   "mailer": {
     "host": "localhost",
-    "port": "4041"
+    "port": "8080"
+  },
+  "butter": {
+    "host": "localhost",
+    "port": "8081"
   }
 }

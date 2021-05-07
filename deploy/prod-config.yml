@@ -6,7 +6,11 @@ data:
   config.json: |
     {
       "mailer": {
-        "host": "backend",
-        "port": "4041"
+        "host": "mailer",
+        "port": "8080"
+      },
+      "butter": {
+        "host": "butter",
+        "port": "8081"
       }
     }

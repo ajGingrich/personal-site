@@ -10,7 +10,8 @@ const app = express();
 
 app.use(favicon(path.join(__dirname, 'public', 'letterA.png')));
 
-app.use('/api', proxy(`http://${config.mailer.host}:${config.mailer.port}`));
+app.use('/api/mailer', proxy(`http://${config.mailer.host}:${config.mailer.port}`));
+// app.use('/api/butter', proxy(`http://${config.butter.host}:${config.butter.port}`));
 
 // Serve up g-zipped static files
 app.use('/', expressStaticGzip(path.join(__dirname, 'dist')));
