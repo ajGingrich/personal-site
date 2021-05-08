@@ -11,6 +11,6 @@ data:
       },
       "butter": {
         "host": "butter",
-        "port": "8081"
+        "port": "8080"
       }
     }
