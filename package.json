@@ -7,9 +7,8 @@
   "license": "MIT",
   "scripts": {
     "clean-client": "rm -rf src/dist && mkdir src/dist",
-    "build": "export NODE_ENV=production && npm run clean-client && webpack --config webpack.prod.config.js",
-    "start": "npm run build && node app.js",
-    "server-dev": "npm run build && nodemon --ignore 'src/' app.js",
+    "build": "npm run clean-client && webpack --config webpack.prod.config.js",
+    "start": "export NODE_ENV=production && npm run build && node app.js",
     "dev": "npm run clean-client && webpack serve --config webpack.dev.config.js --hot"
   },
   "dependencies": {
