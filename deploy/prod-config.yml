@@ -1,0 +1,16 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: irazu-config
+data:
+  config.json: |
+    {
+      "mailer": {
+        "host": "mailer",
+        "port": "8080"
+      },
+      "butter": {
+        "host": "butter",
+        "port": "8080"
+      }
+    }

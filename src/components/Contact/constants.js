@@ -30,7 +30,7 @@ export const CONTACT_FORM = {
   },
   emailWarning: {
     [ENGLISH]: 'I\'ll never share your email with anyone else.',
-    [SPANISH]: 'I\'ll never share your email with anyone else.',
+    [SPANISH]: 'Nunca compartiré su correo.',
   },
   phone: {
     [ENGLISH]: 'Phone Number',

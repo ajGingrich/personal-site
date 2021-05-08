@@ -16,15 +16,14 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site:1.27
-          env:
-          - name: MAILER
-            value: "http://backend:4041"
-          - name: BUTTERCMS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: butter
-                key: buttercms
+          image: coys3000/personal-site:1.30
+          volumeMounts:
+            - name: irazu-volume
+              mountPath: /usr/src/app/config
+      volumes:
+        - name: irazu-volume
+          configMap:
+            name: irazu-config
   replicas: 2
   selector:
     matchLabels:

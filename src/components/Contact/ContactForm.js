@@ -7,6 +7,9 @@ import {
   Button,
 } from 'react-bootstrap';
 
+import { MAILER } from 'constants/api';
+import { postData } from 'utils/service';
+
 import { CONTACT_DESCRIPTION, CONTACT_FORM } from './constants';
 
 const ContactForm = ({ language }) => {
@@ -16,15 +19,19 @@ const ContactForm = ({ language }) => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
-    fetch('/api/user')
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(err => {
-        console.log(err)
-      });
+    const params = {
+      firstName,
+      lastName,
+      email,
+      message,
+      phone,
+    };
+
+    const data = await postData(`${MAILER}/email/contact`, params);
+    console.log(data);
   };
 
   return (
