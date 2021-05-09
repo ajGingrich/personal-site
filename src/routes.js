@@ -4,6 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import Navigation from 'components/Navigation';
 import PageLoader from 'components/PageLoader';
@@ -18,6 +19,7 @@ const Routes = () => {
     <ErrorBoundary>
       <Router>
         <Navigation />
+        <Toaster />
         <Suspense fallback={<PageLoader />}>
           <Switch>
             <Route exact path="/" component={Welcome} />

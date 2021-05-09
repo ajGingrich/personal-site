@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
   Row,
@@ -7,12 +8,13 @@ import {
   Button,
 } from 'react-bootstrap';
 
-import { MAILER } from 'constants/api';
-import { postData } from 'utils/service';
+import { sendContactEmailActionCreator } from 'actions/contact';
 
 import { CONTACT_DESCRIPTION, CONTACT_FORM } from './constants';
 
 const ContactForm = ({ language }) => {
+  const dispatch = useDispatch();
+  const loading = useSelector(state => state.contact.loading);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -30,8 +32,7 @@ const ContactForm = ({ language }) => {
       phone,
     };
 
-    const data = await postData(`${MAILER}/email/contact`, params);
-    console.log(data);
+    dispatch(sendContactEmailActionCreator(params));
   };
 
   return (
@@ -82,6 +83,7 @@ const ContactForm = ({ language }) => {
             variant="primary"
             type="submit"
             onClick={handleSubmit}
+            disabled={loading}
           >
             Submit
           </Button>
