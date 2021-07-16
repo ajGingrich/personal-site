@@ -18,7 +18,7 @@ const Post = () => {
   const {
     title,
     body,
-    featured_image: image,
+    featuredImage,
   } = post;
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Post = () => {
     <div>
       <PostTitle
         title={title}
-        image={image}
+        image={featuredImage}
       />
       <PostContent body={body} />
     </div>

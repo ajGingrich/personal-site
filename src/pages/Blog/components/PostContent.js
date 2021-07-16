@@ -18,6 +18,7 @@ hljs.registerLanguage('python', python);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('java', java);
 hljs.registerLanguage('c', c);
+hljs.registerLanguage('yaml', c);
 
 const PostContent = ({ body }) => {
   const cleanBody = DOMPurify.sanitize(body);
