@@ -1,4 +1,4 @@
-import { ENGLISH, SPANISH } from 'constants/constants';
+import { ENGLISH, SPANISH, SITE_ASSETS } from 'constants/constants';
 
 export const INTERESTS_TITLE = {
   [ENGLISH]: 'Interests',
@@ -6,7 +6,7 @@ export const INTERESTS_TITLE = {
 };
 
 const HIKING = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_hiking.jpeg',
+  image: `${SITE_ASSETS}/carousel_hiking.jpeg`,
   title: {
     [ENGLISH]: 'Hiking and Camping',
     [SPANISH]: 'Senderismo y Acampar',
@@ -18,7 +18,7 @@ const HIKING = {
 };
 
 const SCUBA_DIVING = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_scuba.jpeg',
+  image: `${SITE_ASSETS}/carousel_scuba.jpeg`,
   title: {
     [ENGLISH]: 'Scuba Diving',
     [SPANISH]: 'Buceo',
@@ -30,7 +30,7 @@ const SCUBA_DIVING = {
 };
 
 const SKYDIVING = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_skydive.jpg',
+  image: `${SITE_ASSETS}/carousel_skydive.jpg`,
   title: {
     [ENGLISH]: 'Skydiving',
     [SPANISH]: 'Paracaidismo',
@@ -42,7 +42,7 @@ const SKYDIVING = {
 };
 
 const RUNNING = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_running.jpg',
+  image: `${SITE_ASSETS}/carousel_running.jpg`,
   title: {
     [ENGLISH]: 'Running',
     [SPANISH]: 'Correr',
@@ -54,7 +54,7 @@ const RUNNING = {
 };
 
 const CHESS = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_chess.jpg',
+  image: `${SITE_ASSETS}/carousel_chess.jpg`,
   title: {
     [ENGLISH]: 'Chess',
     [SPANISH]: 'Ajedrez',
@@ -66,7 +66,7 @@ const CHESS = {
 };
 
 const READING = {
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/carousel_reading.jpg',
+  image: `${SITE_ASSETS}/carousel_reading.jpg`,
   style: { color: 'black' },
   title: {
     [ENGLISH]: 'Reading',

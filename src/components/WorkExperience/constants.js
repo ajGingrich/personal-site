@@ -1,4 +1,4 @@
-import { ENGLISH, SPANISH } from 'constants/constants';
+import { ENGLISH, SPANISH, SITE_ASSETS } from 'constants/constants';
 
 export const WORK_EXPERIENCE_TITLE = {
   [ENGLISH]: 'Professional',
@@ -12,7 +12,7 @@ export const EDUCATION_TITLE = {
 
 const GORILLA_LOGIC = {
   company: 'Gorilla Logic',
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/work_gorilla.png',
+  image: `${SITE_ASSETS}/work_gorilla.png`,
   position: {
     [ENGLISH]: 'Senior Software Engineer',
     [SPANISH]: 'Senior Software Engineer',
@@ -32,7 +32,7 @@ const GORILLA_LOGIC = {
 
 const AVANTICA = {
   company: 'Avantica',
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/work_avantica.jpeg',
+  image: `${SITE_ASSETS}/work_avantica.jpeg`,
   position: {
     [ENGLISH]: 'Software Engineer',
     [SPANISH]: 'Ingeniero de Software',
@@ -55,7 +55,7 @@ const AVANTICA = {
 
 const SBR = {
   company: 'SBR Netmarketing',
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/work_sbr.png',
+  image: `${SITE_ASSETS}/work_sbr.png`,
   position: {
     [ENGLISH]: 'Software Developer',
     [SPANISH]: 'Desarrollador de Programas',
@@ -78,7 +78,7 @@ const SBR = {
 
 const WRA = {
   company: 'Whitman, Requardt, & Associates, LLP.',
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/work_wra.png',
+  image: `${SITE_ASSETS}/work_wra.png`,
   position: {
     [ENGLISH]: 'Transportation Engineer',
     [SPANISH]: 'Diseñador de autopistas',
@@ -101,7 +101,7 @@ const WRA = {
 
 const VIRGINIA_TECH = {
   company: 'Virginia Tech',
-  image: 'https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/work_vt.jpeg',
+  image: `${SITE_ASSETS}/work_vt.jpeg`,
   position: {
     [ENGLISH]: 'B.S. in Civil and Environmental Engineering',
     [SPANISH]: 'Licenciatura en Ingeniería Civil',

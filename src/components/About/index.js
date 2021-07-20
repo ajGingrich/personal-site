@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
 
 import { languageSelector } from 'selectors/language';
+import { SITE_ASSETS } from 'constants/constants';
 
 import {
   ABOUT_ME_TITLE,
@@ -26,7 +27,7 @@ const About = () => {
         <Col sm={3} xs={12} className="text-center">
           <img
             className="img-responsive center-xs"
-            src="https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/about_formal.webp"
+            src={`${SITE_ASSETS}/about_formal.webp`}
             alt=""
           />
         </Col>

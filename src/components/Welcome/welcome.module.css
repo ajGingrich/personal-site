@@ -6,9 +6,8 @@
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url('https://andrewgingrich-site-assets.s3.amazonaws.com/personal-site/intro_skydive.webp') no-repeat center center fixed;
+  background: url('https://d2ngsrllpwd87n.cloudfront.net/personal-site/intro_skydive.webp') no-repeat center center fixed;
   background-size: cover;
-  /* height: 100vh; */
   text-shadow: 1px 1px 0 #000,
  -1px 1px 0 #000,
  1px -1px 0 #000,
