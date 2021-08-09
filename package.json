@@ -6,7 +6,7 @@
   "author": "Andrew Gingrich <gandrew320@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "clean-client": "rm -rf src/dist && mkdir src/dist",
+    "clean-client": "rm -rf dist && mkdir dist",
     "build": "npm run clean-client && webpack --config webpack.prod.config.js",
     "start": "export NODE_ENV=production && npm run build && node app.js",
     "dev": "npm run clean-client && webpack serve --config webpack.dev.config.js --hot"
