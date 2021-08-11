@@ -9,14 +9,14 @@ metadata:
     app: irazu
 spec:
   rules:
-    - host: andrewgingrich.com
+    - host: andrewgingrich.us
       http:
         paths:
           - backend:
               serviceName: frontend
               servicePort: 4040
             path: /
-    - host: www.andrewgingrich.com
+    - host: www.andrewgingrich.us
       http:
         paths:
           - backend:
@@ -25,6 +25,6 @@ spec:
             path: /
   tls:
     - hosts:
-      - andrewgingrich.com
-      - www.andrewgingrich.com
+      - andrewgingrich.us
+      - www.andrewgingrich.us
       secretName: irazu-tls
