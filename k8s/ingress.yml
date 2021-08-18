@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -12,17 +12,23 @@ spec:
     - host: andrewgingrich.com
       http:
         paths:
-          - backend:
-              serviceName: frontend
-              servicePort: 4040
-            path: /
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 4040
     - host: www.andrewgingrich.com
       http:
         paths:
-          - backend:
-              serviceName: frontend
-              servicePort: 4040
-            path: /
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 4040
   tls:
     - hosts:
       - andrewgingrich.com
