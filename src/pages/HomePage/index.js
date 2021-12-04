@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Route,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
@@ -16,12 +16,12 @@ import styles from './home-page.module.css';
 const HomePage = () => {
   return (
     <Container className={styles.content}>
-      <Switch>
-        <Route path="/about" component={AboutMe} />
-        <Route path="/experience" component={WorkExperience} />
-        <Route path="/contact" component={Contact} />
-        <Route component={FourOhFourError} />
-      </Switch>
+      <Routes>
+        <Route path="about" element={<AboutMe />} />
+        <Route path="experience" element={<WorkExperience />} />
+        <Route path="contact" element={<Contact />} />
+        <Route element={<FourOhFourError />} />
+      </Routes>
       <Footer />
     </Container>
   );

@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import {
   HashRouter as Router,
   Route,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
@@ -14,22 +14,22 @@ const Welcome = lazy(() => import('./components/Welcome'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const Blog = lazy(() => import('./pages/Blog'));
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
     <ErrorBoundary>
       <Router>
         <Navigation />
         <Toaster />
         <Suspense fallback={<PageLoader />}>
-          <Switch>
-            <Route exact path="/" component={Welcome} />
-            <Route path="/blog" component={Blog} />
-            <Route component={HomePage} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route element={<HomePage />} />
+          </Routes>
         </Suspense>
       </Router>
     </ErrorBoundary>
   );
 };
 
-export default Routes;
+export default AppRoutes;

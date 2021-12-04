@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchPostActionCreator } from 'actions/butter';
@@ -13,7 +13,7 @@ const Post = () => {
   const post = useSelector(currentPostSelector);
   const loading = useSelector(butterLoadingSelector);
   const dispatch = useDispatch();
-  const { params } = useRouteMatch();
+  const { params } = useMatch();
   const { slug } = params || {};
   const {
     title,
