@@ -20,7 +20,7 @@ const HomePage = () => {
         <Route path="about" element={<AboutMe />} />
         <Route path="experience" element={<WorkExperience />} />
         <Route path="contact" element={<Contact />} />
-        <Route element={<FourOhFourError />} />
+        <Route path="*" element={<FourOhFourError />} />
       </Routes>
       <Footer />
     </Container>

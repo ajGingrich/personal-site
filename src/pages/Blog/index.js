@@ -16,8 +16,8 @@ const Blog = () => {
     <Container className={styles.container}>
       <BlogNavigation />
       <Routes>
-        <Route exact path={path} component={List} />
-        <Route path={`${path}/post/:slug`} component={Post} />
+        <Route path={path} element={<List />} />
+        <Route path={`${path}/post/:slug`} element={<Post />} />
       </Routes>
       <Footer />
     </Container>
