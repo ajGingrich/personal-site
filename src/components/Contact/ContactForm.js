@@ -32,6 +32,10 @@ const ContactForm = ({ language }) => {
       phone,
     };
 
+    gtag('event', 'send_contact_email', { // eslint-disable-line no-undef
+      method: 'Google',
+    });
+
     dispatch(sendContactEmailActionCreator(params));
   };
 

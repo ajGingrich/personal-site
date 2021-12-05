@@ -32,7 +32,7 @@ const List = () => {
         title,
         slug,
         summary,
-        featuredImage,
+        featured_image,
       }) => (
         <Link
           to={`${url}/post/${slug}`}
@@ -41,7 +41,7 @@ const List = () => {
         >
           <PostTitle
             title={title}
-            image={featuredImage}
+            image={featured_image}
           />
           <p>{summary}</p>
         </Link>
