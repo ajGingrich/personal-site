@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useMatch } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import Footer from 'components/Footer';
@@ -10,14 +10,15 @@ import Post from './Post';
 import styles from './blog.module.css';
 
 const Blog = () => {
-  const { path } = useMatch();
+  const { pathname } = useLocation();
+  console.log(pathname, 'the stuff')
 
   return (
     <Container className={styles.container}>
       <BlogNavigation />
       <Routes>
-        <Route path={path} element={<List />} />
-        <Route path={`${path}/post/:slug`} element={<Post />} />
+        <Route path="" element={<List />} />
+        <Route path="post/:slug" element={<Post />} />
       </Routes>
       <Footer />
     </Container>
