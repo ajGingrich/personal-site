@@ -10,9 +10,12 @@ import Navigation from 'components/Navigation';
 import PageLoader from 'components/PageLoader';
 import ErrorBoundary from 'components/ErrorBoundary';
 
-const Welcome = lazy(() => import('./components/Welcome'));
-const HomePage = lazy(() => import('./pages/HomePage'));
+const Welcome = lazy(() => import('./pages/Welcome'));
+const AboutMe = lazy(() => import('./pages/AboutMe'));
+const WorkExperience = lazy(() => import('./pages/WorkExperience'));
+const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
+const FourOhFourError = lazy(() => import('./pages/FourOhFourError'));
 
 const AppRoutes = () => {
   return (
@@ -23,8 +26,11 @@ const AppRoutes = () => {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Welcome />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="*" element={<HomePage />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/experience" element={<WorkExperience />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog/*" element={<Blog />} />
+            <Route path="*" element={<FourOhFourError />} />
           </Routes>
         </Suspense>
       </Router>

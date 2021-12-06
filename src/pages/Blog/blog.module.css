@@ -4,6 +4,10 @@
   color: black;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .container img {
   max-width: 100%;
   height: auto;

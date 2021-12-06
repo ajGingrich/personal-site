@@ -3,6 +3,13 @@ body {
   background-image: url('https://d2ngsrllpwd87n.cloudfront.net/personal-site/dark-background.webp');
 }
 
+.content {
+  color: black;
+  background-image: url('https://d2ngsrllpwd87n.cloudfront.net/personal-site/grey-background.webp');
+  font-size: 14px;
+  min-height: 100vh;
+}
+
 h1,
 h2,
 h3,
