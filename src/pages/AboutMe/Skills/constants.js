@@ -71,7 +71,7 @@ const DEV_OPS = {
     },
     {
       name: 'AWS',
-      level: SKILL_CATEGORY_FAMILIAR,
+      level: SKILL_CATEGORY_COMFORTABLE,
     },
   ],
 };

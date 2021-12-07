@@ -12,6 +12,8 @@ const Navigation = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  const handleBrandClick = () => navigate(ROUTES.home);
+
   return (
     <Navbar
       bg="dark"
@@ -24,9 +26,11 @@ const Navigation = () => {
         <Navbar.Brand>
           <LanguageFlag />
           <span
-            onClick={() => navigate(ROUTES.home)}
-            role="1"
+            onClick={handleBrandClick}
+            role="button"
             className={styles.brand}
+            onKeyDown={handleBrandClick}
+            tabIndex={0}
           >
             AJG
           </span>

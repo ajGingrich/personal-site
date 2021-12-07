@@ -7,12 +7,12 @@ export const ABOUT_ME_TITLE = {
 
 export const ABOUT_DESCRIPTION = {
   details: {
-    [ENGLISH]: 'I grew up in Virginia but I consider myself a global nomad. I was born in Haiti, lived 2 years in Nepal as a child and have been based in Costa Rica for the past 5 years. I am a dual citizen with both US and Costa Rican citizenship. English is my native language but I am fluent in Spanish as well.',
-    [SPANISH]: 'Crecí en Virginia pero me considero como un nómada global. Nací en Port-au-Prince Haiti, viví dos ańos en Nepal como nińo y he vivido los ultimos 5 ańos en Costa Rica. Tengo doble cuidadanía con Costa Rica y los Estados Unidos. Inglés es mi lengua materna pero tambien tengo fluidez en español.',
+    [ENGLISH]: 'Software Engineer with over four years of professional experience developing production applications using full-stack technologies. Strong general problem solving and critical thinking skills with a B.S. in Civil Engineering and two years experience working in Highway Design.',
+    [SPANISH]: 'Ingeniero de sistemas con más de cuatro años de experience desarrollando applicaciónes usando tecnologías full-stack. Fuerte habilidades para resolver problemas y pensar criticamente con un bachillerato en ingenería civil y dos años trabajando en el diseño de autopistas.',
   },
   quoteHeader: {
-    [ENGLISH]: 'I have over three years of professional development experience working with full-stack technologies. I currently work as a Senior Software Engineer at Gorilla Logic with React, Ruby on Rails, and MySQL. Although I enjoy seeing the end product, my real passion is for learning and conquering new challenges. This philosophy is described eloquently by Allan Watts:',
-    [SPANISH]: 'Tengo más de tres años de experiencía trabjando con tecnologías full-stack. Actualmente trabajo como Desarrollador de Software Senior en Gorilla Logic con React, Ruby on Rails, and MySQL. Aunque disfruto viendo el producto final, mi verdadero pasión es para apender y conquistar nuevos desafíos. Este filosofía está bien dicho por Allan Watts',
+    [ENGLISH]: 'Although I enjoy seeing the end product, my real passion is for learning and conquering new challenges. This philosophy is described eloquently by Allan Watts:',
+    [SPANISH]: 'Aunque disfruto viendo el producto final, mi verdadero pasión es para apender y conquistar nuevos desafíos. Este filosofía está bien dicho por Allan Watts:',
   },
   quote: {
     [ENGLISH]: '“This is the real secret of life -- to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play”',
