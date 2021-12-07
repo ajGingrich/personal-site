@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: coys3000/personal-site:1.33
+          image: coys3000/personal-site:1.34
           volumeMounts:
             - name: irazu-volume
               mountPath: /usr/src/app/config
