@@ -18,8 +18,7 @@ export const fetchPostListActionCreator = ({
 }) => async dispatch => {
   dispatch({ type: FETCH_POST_LOADING });
   try {
-    // const response = await getData(`${BUTTER}/post`, { page, pageSize: size });
-    const { data: response } = await butter.post.list({ page, page_size: size });
+    const response = await getData(`${BUTTER}/post`, { page, pageSize: size });
     dispatch({
       type: FETCH_POST_LIST_SUCCESS,
       payload: {
@@ -36,8 +35,7 @@ export const fetchPostListActionCreator = ({
 export const fetchPostActionCreator = slug => async dispatch => {
   dispatch({ type: FETCH_POST_LOADING });
   try {
-    // const response = await getData(`${BUTTER}/post/${slug}`);
-    const { data: response } = await butter.post.retrieve(slug);
+    const response = await getData(`${BUTTER}/post/${slug}`);
     dispatch({
       type: FETCH_POST_SUCCESS,
       payload: response.data,
