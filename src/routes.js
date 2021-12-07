@@ -6,11 +6,13 @@ import {
 } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
+import { ROUTES } from 'constants/constants';
+
 import Navigation from 'components/Navigation';
 import PageLoader from 'components/PageLoader';
 import ErrorBoundary from 'components/ErrorBoundary';
+import Welcome from './pages/Welcome';
 
-const Welcome = lazy(() => import('./pages/Welcome'));
 const AboutMe = lazy(() => import('./pages/AboutMe'));
 const WorkExperience = lazy(() => import('./pages/WorkExperience'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -25,11 +27,11 @@ const AppRoutes = () => {
         <Toaster />
         <Suspense fallback={<PageLoader />}>
           <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/experience" element={<WorkExperience />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog/*" element={<Blog />} />
+            <Route path={ROUTES.home} element={<Welcome />} />
+            <Route path={ROUTES.about} element={<AboutMe />} />
+            <Route path={ROUTES.experience} element={<WorkExperience />} />
+            <Route path={ROUTES.contact} element={<Contact />} />
+            <Route path={`${ROUTES.blog}/*`} element={<Blog />} />
             <Route path="*" element={<FourOhFourError />} />
           </Routes>
         </Suspense>

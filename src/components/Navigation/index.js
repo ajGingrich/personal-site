@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+import { ROUTES } from 'constants/constants';
 
 import LanguageFlag from './LanguageFlag';
 
@@ -8,8 +10,7 @@ import styles from './navigation.module.css';
 
 const Navigation = () => {
   const navigate = useNavigate();
-
-  // TODO: make it highlighted with the navlink
+  const { pathname } = useLocation();
 
   return (
     <Navbar
@@ -23,7 +24,7 @@ const Navigation = () => {
         <Navbar.Brand>
           <LanguageFlag />
           <span
-            onClick={() => navigate('/')}
+            onClick={() => navigate(ROUTES.home)}
             role="1"
             className={styles.brand}
           >
@@ -33,16 +34,28 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link onClick={() => navigate('/about')}>
+            <Nav.Link
+              onClick={() => navigate(ROUTES.about)}
+              active={pathname === ROUTES.about}
+            >
               About
             </Nav.Link>
-            <Nav.Link onClick={() => navigate('/experience')}>
+            <Nav.Link
+              onClick={() => navigate(ROUTES.experience)}
+              active={pathname === ROUTES.experience}
+            >
               Experience
             </Nav.Link>
-            <Nav.Link onClick={() => navigate('/contact')}>
+            <Nav.Link
+              onClick={() => navigate(ROUTES.contact)}
+              active={pathname === ROUTES.contact}
+            >
               Contact
             </Nav.Link>
-            <Nav.Link onClick={() => navigate('/blog')}>
+            <Nav.Link
+              onClick={() => navigate(ROUTES.blog)}
+              active={pathname.slice(0, 5) === ROUTES.blog}
+            >
               Blog
             </Nav.Link>
           </Nav>
