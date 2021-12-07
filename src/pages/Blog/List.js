@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchPostListActionCreator } from 'actions/butter';
@@ -14,7 +14,6 @@ const List = () => {
   const dispatch = useDispatch();
   const loading = useSelector(butterLoadingSelector);
   const posts = useSelector(butterPostsSelector);
-  const { url } = useRouteMatch();
 
   useEffect(() => {
     if (!posts.length) {
@@ -35,7 +34,7 @@ const List = () => {
         featured_image,
       }) => (
         <Link
-          to={`${url}/post/${slug}`}
+          to={`post/${slug}`}
           key={slug}
           className={styles.postLink}
         >

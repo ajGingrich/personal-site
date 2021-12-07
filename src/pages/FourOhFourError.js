@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const FourOhFourError = () => {
   return (
-    <div>
+    <Container className="content">
       404!
-    </div>
+    </Container>
   );
 };
 

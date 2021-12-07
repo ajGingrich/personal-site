@@ -44,21 +44,21 @@ const ContactForm = ({ language }) => {
       <Col xs={12} md={{ span: 10, offset: 1 }} className="text-center">
         <p>{CONTACT_DESCRIPTION[language]}</p>
         <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="contactFirstName">
+          <Form.Group className="mb-3" controlId="contactFirstName">
             <Form.Control
               type="text"
               placeholder={CONTACT_FORM.firstName[language]}
               onChange={e => setFirstName(e.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId="contactLastName">
+          <Form.Group className="mb-3" controlId="contactLastName">
             <Form.Control
               type="text"
               placeholder={CONTACT_FORM.lastName[language]}
               onChange={e => setLastName(e.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId="contactEmail">
+          <Form.Group className="mb-3" controlId="contactEmail">
             <Form.Control
               type="email"
               placeholder={CONTACT_FORM.email[language]}
@@ -68,14 +68,14 @@ const ContactForm = ({ language }) => {
               {CONTACT_FORM.emailWarning[language]}
             </Form.Text>
           </Form.Group>
-          <Form.Group controlId="contactPhoneNumber">
+          <Form.Group className="mb-3" controlId="contactPhoneNumber">
             <Form.Control
               type="text"
               placeholder={CONTACT_FORM.phone[language]}
               onChange={e => setPhone(e.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId="contactMessage">
+          <Form.Group className="mb-3" controlId="contactMessage">
             <Form.Control
               as="textarea"
               rows={5}

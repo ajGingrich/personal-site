@@ -1,16 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
-import About from 'components/About';
-import Skills from 'components/Skills';
-import Interests from 'components/Interests';
+import Footer from 'components/Footer';
+
+import About from './About';
+import Skills from './Skills';
+import Interests from './Interests';
 
 const AboutMe = () => {
   return (
-    <>
+    <Container className="content">
       <About />
       <Skills />
       <Interests />
-    </>
+      <Footer />
+    </Container>
   );
 };
 

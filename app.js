@@ -8,7 +8,7 @@ const config = require('./config/config.json');
 
 const app = express();
 
-app.use(favicon(path.join(__dirname, 'public', 'letterA.png')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use('/api/mailer', proxy(`http://${config.mailer.host}:${config.mailer.port}`));
 app.use('/api/butter', proxy(`http://${config.butter.host}:${config.butter.port}`));
