@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = require('./webpack.config');
@@ -12,13 +12,13 @@ config.plugins.unshift(new MiniCssExtractPlugin({
   insert: '#title',
 }));
 
-// config.plugins.push(new CompressionPlugin({
-//   algorithm: 'gzip',
-//   test: /\.js$|\.css$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
-//   minRatio: 1,
-//   threshold: 0,
-//   deleteOriginalAssets: true,
-// }));
+config.plugins.push(new CompressionPlugin({
+  algorithm: 'gzip',
+  test: /\.js$|\.css$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+  minRatio: 1,
+  threshold: 0,
+  deleteOriginalAssets: true,
+}));
 
 // config.plugins.push(new BundleAnalyzerPlugin());
 
