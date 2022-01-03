@@ -10,7 +10,7 @@ const Footer = () => {
         <Col md={12}>
           <footer className={styles.footer}>
             <div className="text-center">
-              <p>&copy; Andrew Gingrich 2021</p>
+              <p>&copy; Andrew Gingrich {new Date().getFullYear()}</p>
             </div>
           </footer>
         </Col>
