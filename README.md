@@ -3,9 +3,9 @@
 ## Development
 
 ```
-nvm install 14.16.0
-yarn install
-yarn dev
+nodenv install 16.16.0
+npm install
+npm run dev
 ```
 
 Open at `locahost:3000`
