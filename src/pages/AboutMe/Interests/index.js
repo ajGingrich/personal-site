@@ -24,13 +24,12 @@ const Interests = () => {
           </span>
         </Col>
       </Row>
-      <Row>
-        <Col xs={12} className="text-center">
+      <Row className="d-flex justify-content-center">
+        <Col xs={12} md={8} className="text-center">
           <Carousel>
             {INTERESTS_SLIDESHOW.map(({
               image,
               title,
-              description,
               style = {},
             }) => {
               return (
@@ -44,9 +43,6 @@ const Interests = () => {
                     <h3 className={classnames(styles.captionTitle)} style={style}>
                       {title[language]}
                     </h3>
-                    <p className={classnames('d-none', 'd-sm-block')} style={style}>
-                      {description[language]}
-                    </p>
                   </Carousel.Caption>
                 </Carousel.Item>
               );
