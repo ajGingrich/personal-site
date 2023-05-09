@@ -3,7 +3,7 @@
 ## Development
 
 ```
-nodenv install 16.16.0
+nodenv install 18.16.0
 npm install
 npm run dev
 ```
