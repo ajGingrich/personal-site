@@ -1,4 +1,4 @@
-FROM node:16.13.1
+FROM node:18.16.0
 ENV NODE_ENV=production
 
 # Create app directory
