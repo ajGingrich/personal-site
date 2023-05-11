@@ -25,7 +25,7 @@ const GORILLA_LOGIC = {
   endDate: null,
   location: 'Cartago, Costa Rica',
   description: {
-    [ENGLISH]: 'I currently work as a Senior Software Engineer for Gorilla Logic. As with Avantica, I work directly with a development team in the United States. Although I primarily write front-end code with React/Redux, I have also been developing with Ruby on Rails as I migrate existing portions of the application from Rails into React.',
+    [ENGLISH]: 'I currently work as a Lead Software Engineer for Gorilla Logic. I am a Full Stack Developer and the technologies that I use currently are Ruby on Rails, React/Redux, Node.js and Apache Airflow.',
     [SPANISH]: 'Actualmente trabajo como Desarrollador de Software Senior en Gorilla Logic. Parecido a Avantica, trabajo directamente con un equipo de desarollo ubicado en los Estados Unidos. Principalmente escribo codigo front-end en React/Redux pero también he estado desarollando en Ruby on Rails en el proceso de migrar porciones de la applicación de Rails a React.',
   },
 };
