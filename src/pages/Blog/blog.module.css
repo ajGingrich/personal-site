@@ -43,6 +43,13 @@
   text-decoration: none;
 }
 
+.loaderWrapper {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .postTitle {
   display: flex;
   align-items: center;
